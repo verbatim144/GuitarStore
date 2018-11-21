@@ -26,7 +26,7 @@ input[type=search]{
   border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: rgba(249, 237, 255, 0.6);
+  background-color: rgba(252, 250, 255, 0.8);
 }
 
 
@@ -181,4 +181,172 @@ a{
 .modal-title {
   display: block;
   margin-left: auto;
+}
+
+.modal-header{
+  background: rgb(5, 2, 2);
+  color: #cabfb8;
+  font-family: "Roboto";
+}
+
+.form-text-reg{
+  display: block;
+  float: right;
+  color: #C0B3A0;
+}
+
+.form-text-pas{
+  display: block;
+  float: left;
+  color: #C0B3A0;
+}
+
+.form-control{
+  font-family: Roboto;
+
+}
+
+.let-modal{
+  margin-top: 100px;
+}
+
+.form-text{
+  font-family: Roboto;
+}
+
+
+.form-login{
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-body{
+  background: rgb(5, 2, 2);
+  color: #cabfb8;
+}
+
+.text-muted{
+  margin-top: 15px;
+}
+
+.form-reg{
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-reg{
+
+  color: #ffffff;
+  margin-top: 20px;
+  display: block;
+  background: #E14658;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.label{
+  margin-left: 110px;
+}
+
+.modal-title-pas{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+
+@media only screen and (max-width: 991px) {
+  #navbarSupportedContent{
+    background: rgb(6, 2, 2);
+    height: 272px;
+  }
+
+  .hr{
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  input[type=search]{
+    display: none;
+    visibility: hidden;
+  }
+
+  .cat{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .panel{
+    visibility: hidden;
+  }
+
+  .form-control{
+    display: none ;
+
+  }
+  .btn{
+    display: none;
+  }
+
+  .visibily-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .form-inline{
+    display: block;
+    padding-top: 10px;
+    left: 0%;
+    right: 0%;
+
+  }
+
+  .nav-link-z{
+    display: none;
+  }
+
+  .user-acc-img{
+    position: fixed;
+    right: 5%;
+    margin-top: 10px;
+  }
+
+  .form-login{
+    position: center;
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .form-reg{
+    position: center;
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .label{
+    display: block;
+    position: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
