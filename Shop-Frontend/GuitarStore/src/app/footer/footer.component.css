@@ -1,0 +1,31 @@
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: inline-block;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+
+.fab{
+  margin-top: 10px;
+  font-size: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #7c7467;
+  text-shadow: 5px 3px #101010;
+}
+
+@media only screen and (max-width: 440px){
+  .fab{
+    flex-direction: row;
+    justify-self: center;
+    display: inline-block;
+  }
+}
