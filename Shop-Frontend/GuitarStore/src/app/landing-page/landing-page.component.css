@@ -1,0 +1,103 @@
+body{
+  overflow-y: hidden;
+}
+
+ngb-carousel{
+  height: 40%;
+  width: 70%;
+  display: block;
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.container{
+  display: flex;
+}
+
+.caption{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  font-family: Roboto;
+  font-weight: bolder;
+}
+
+.small-caption{
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.line{
+  margin-top: 30px;
+  border-bottom: 2px solid #C0B3A0;
+  text-align: center;
+}
+
+.under-caption{
+  margin-top: 30px;
+  text-align: center;
+  color: #C0B3A0;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: lighter;
+}
+
+
+
+.disc {
+  display: block;
+  position: relative;
+  color: #E14658;
+  font-family: Roboto;
+  font-weight: bolder;
+  font-size: 80px;
+  margin-top: -10px;
+
+  animation: discount 2s linear infinite;
+}
+
+@keyframes discount {
+  0%{
+    color: #fff;
+  }
+
+  50%{
+    color: #a93544;
+  }
+
+  100%{
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  ngb-carousel{
+    margin-top: 200px;
+    height: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 991px) {
+  ngb-carousel{
+    margin-top: 200px;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  ngb-carousel{
+    margin-top: 100px;
+    height: 70%;
+  }
+
+  .caption{
+    font-size: 30px;
+  }
+}
