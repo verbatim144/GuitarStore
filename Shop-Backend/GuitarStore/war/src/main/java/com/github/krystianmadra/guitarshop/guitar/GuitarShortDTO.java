@@ -1,4 +1,6 @@
-package com.github.krystianmadra.guitarshop.model;
+package com.github.krystianmadra.guitarshop.guitar;
+
+import com.github.krystianmadra.guitarshop.GuitarEntity;
 
 public class GuitarShortDTO {
 
@@ -18,6 +20,11 @@ public class GuitarShortDTO {
         this.price = guitarDTO.getPrice();
     }
 
+    public GuitarShortDTO(GuitarEntity entity) {
+        id = entity.getId();
+        name = entity.getName();
+        price = entity.getPrice();
+    }
 
     public Long getId() {
         return id;
