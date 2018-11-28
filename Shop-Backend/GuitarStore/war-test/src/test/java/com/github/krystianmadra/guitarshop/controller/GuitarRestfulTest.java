@@ -17,12 +17,12 @@ public class GuitarRestfulTest {
 
     @Test
     public void shouldReturnWholeGuitarWithId1() throws IOException {
-        restTest("http://localhost:8080/war/guitar/1", "guitar/1.json");
+        restTest("http://localhost:8080/war/guitar/1", "controller/1.json");
     }
 
     @Test
     public void shouldReturnAllIGuitars() throws IOException {
-        restTest("http://localhost:8080/war/guitar", "guitar/all.json");
+        restTest("http://localhost:8080/war/guitar", "controller/all.json");
     }
 
     private void restTest(String aRestUrl, String aPreparedFilePath) throws IOException {
