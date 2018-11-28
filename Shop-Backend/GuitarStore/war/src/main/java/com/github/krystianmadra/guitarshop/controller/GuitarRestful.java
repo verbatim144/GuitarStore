@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Path("guitar")
+@Path("/guitar")
 public class GuitarRestful {
 
     private final Set<GuitarDTO> database = new HashSet<>();
@@ -29,7 +29,7 @@ public class GuitarRestful {
     }
 
     @GET
-    @Path("{id}")
+    @Path("/{id}")
     @Produces("application/json; charset=UTF-8")
     public Response getById(@PathParam("id") long aId) {
         GuitarDTO ret = database.stream().filter(book -> book.getId() == aId).findFirst().get();
