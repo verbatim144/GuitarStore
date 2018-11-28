@@ -6,6 +6,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="war" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="ejb-1.0.0-SNAPSHOT.jar">
+            <element id="module-output" name="ejb" />
+          </element>
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/war/target/war-1.0.0-SNAPSHOT/META-INF/MANIFEST.MF" />
