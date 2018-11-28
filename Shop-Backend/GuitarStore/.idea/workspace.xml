@@ -104,8 +104,11 @@
       <file leaf-file-name="GuitarRestfulTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="111">
+              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -169,8 +172,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-24" />
-    <option name="width" value="1474" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -726,7 +729,7 @@
       <updated>1542822356540</updated>
       <workItem from="1542822359430" duration="222000" />
       <workItem from="1542822729224" duration="3403000" />
-      <workItem from="1543433594016" duration="1364000" />
+      <workItem from="1543433594016" duration="1863000" />
     </task>
     <servers />
   </component>
@@ -760,10 +763,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4989000" />
+    <option name="totallyTimeSpent" value="5488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="0" width="1179" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" />
@@ -886,6 +890,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,8 +1043,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="111">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
