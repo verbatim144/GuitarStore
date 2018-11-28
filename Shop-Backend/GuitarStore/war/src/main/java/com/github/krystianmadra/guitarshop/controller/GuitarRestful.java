@@ -1,45 +1,61 @@
 package com.github.krystianmadra.guitarshop.controller;
 
-import com.github.krystianmadra.guitarshop.model.GuitarDTO;
-import com.github.krystianmadra.guitarshop.model.GuitarShortDTO;
+import com.github.krystianmadra.guitarshop.GuitarDao;
+import com.github.krystianmadra.guitarshop.GuitarEntity;
+import com.github.krystianmadra.guitarshop.guitar.GuitarDTO;
+import com.github.krystianmadra.guitarshop.guitar.GuitarDTOToEntity;
+import com.github.krystianmadra.guitarshop.guitar.GuitarShortDTO;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ejb.EJB;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Path("/guitar")
 public class GuitarRestful {
 
-    private final Set<GuitarDTO> database = new HashSet<>();
-
-    public GuitarRestful() {
-        mockDatabase();
-    }
-
-    private void mockDatabase() {
-        database.add(new GuitarDTO(1l, "Ibanez 740", 1199.99));
-        database.add(new GuitarDTO(2l, "Yamaha C30M", 530.0));
-        database.add(new GuitarDTO(1l, "Yamaha F310P", 730.99));
-    }
+    @EJB
+    private GuitarDao guitarDao;
 
     @GET
     @Path("/{id}")
     @Produces("application/json; charset=UTF-8")
-    public Response getById(@PathParam("id") long aId) {
-        GuitarDTO ret = database.stream().filter(book -> book.getId() == aId).findFirst().get();
+    public Response getById(@PathParam("id") long id) {
+        GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarById(id).get());
         return Response.status(200).entity(ret).build();
     }
 
     @GET
     @Produces("application/json; charset=UTF-8")
     public Response getAll() {
-        List<GuitarShortDTO> ret = database.stream().map(GuitarShortDTO::new).collect(Collectors.toList());
+        List<GuitarShortDTO> ret = guitarDao.getAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());
         return Response.status(200).entity(ret).build();
+    }
+
+    @POST
+    @Consumes("application/json; charset=UTF-8")
+    @Produces("application/json; charset=UTF-8")
+    public Response addGuitar(GuitarDTO guitar) {
+        GuitarEntity entity = guitarDao.addGuitar(GuitarDTOToEntity.toEntity(guitar));
+        GuitarDTO ret = new GuitarDTO(entity);
+        return Response.status(201).entity(ret).build();
+    }
+
+    @DELETE
+    @Path("{id}")
+    @Consumes("application/json; charset=UTF-8")
+    @Produces("application/json; charset=UTF-8")
+    public Response removeGuitar(@PathParam("id") long id) {
+        guitarDao.remove(id);
+        return Response.status(204).build();
+    }
+
+    @PUT
+    @Consumes("application/json; charset=UTF-8")
+    @Produces("application/json; charset=UTF-8")
+    public Response editBook(GuitarDTO guitar) {
+        guitarDao.update(GuitarDTOToEntity.toEntity(guitar));
+        return Response.status(200).entity(guitar).build();
     }
 }
