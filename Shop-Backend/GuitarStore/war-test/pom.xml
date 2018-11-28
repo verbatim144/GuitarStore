@@ -7,14 +7,14 @@
     <packaging>war</packaging>
     <name>war-test</name>
 
-	<properties>
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-war-pluginVersion>3.1.0</maven-war-pluginVersion>
     </properties>
 
-	 <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -24,8 +24,8 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-		</plugins>
-	</build>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
@@ -33,7 +33,7 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.2.0</version>
             <scope>test</scope>
-            </dependency>
+        </dependency>
         <dependency>
             <groupId>com.jayway.restassured</groupId>
             <artifactId>rest-assured</artifactId>
