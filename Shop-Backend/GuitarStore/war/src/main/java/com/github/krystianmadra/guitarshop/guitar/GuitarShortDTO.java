@@ -1,6 +1,6 @@
 package com.github.krystianmadra.guitarshop.guitar;
 
-import com.github.krystianmadra.guitarshop.GuitarEntity;
+import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 
 public class GuitarShortDTO {
 

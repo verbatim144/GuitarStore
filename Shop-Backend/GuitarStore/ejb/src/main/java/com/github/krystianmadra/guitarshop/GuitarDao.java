@@ -1,5 +1,7 @@
 package com.github.krystianmadra.guitarshop;
 
+import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -8,7 +10,6 @@ import java.util.*;
 @Startup
 @Singleton
 public class GuitarDao {
-
 
     private final Set<GuitarEntity> guitars = new HashSet<>();
 
@@ -20,7 +21,7 @@ public class GuitarDao {
     void init(){
         guitars.add(new GuitarEntity(1l, "Ibanez 740", 1199.99));
         guitars.add(new GuitarEntity(2l, "Yamaha C30M", 530.0));
-        guitars.add(new GuitarEntity(1l, "Yamaha F310P", 730.99));
+        guitars.add(new GuitarEntity(3l, "Yamaha F310P", 730.99));
     }
 
     public Optional<GuitarEntity> getGuitarById(long id){
