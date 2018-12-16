@@ -1,32 +1,38 @@
 package com.github.krystianmadra.guitarshop.entities;
 
-import java.io.Serializable;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
-public class GuitarEntity implements Serializable {
+@Entity
+@Table(name = "GUITAR")
+public class GuitarEntity extends AbstractBaseEntity {
 
-    private Long id;
     private String name;
-    private double price;
+    private BigDecimal price;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private ManufacturerEntity manufacturer;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private GuitarCategoryEntity guitarCategory;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private List<OpinionEntity> opinionEntity;
 
-    public GuitarEntity(Long id, String name, double price){
-        this.id = id;
+    public GuitarEntity(String name, BigDecimal price){
         this.name = name;
         this.price = price;
+        opinionEntity = new ArrayList<>();
     }
 
     public GuitarEntity(){
+        opinionEntity = new ArrayList<>();
     }
 
     public GuitarEntity(long id){
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        super(id);
     }
 
     public String getName() {
@@ -37,31 +43,23 @@ public class GuitarEntity implements Serializable {
         this.name = name;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        GuitarEntity guitarDto = (GuitarEntity) o;
-
-        return id != null ? id.equals(guitarDto.id) : guitarDto.id == null;
+    public ManufacturerEntity getManufacturer() {
+        return manufacturer;
     }
 
-    @Override
-    public int hashCode() {
-        return id != null ? id.hashCode() : 0;
+    public GuitarCategoryEntity getGuitarCategory() {
+        return guitarCategory;
     }
 
     public void update(GuitarEntity guitarEntity) {
-        this.id = guitarEntity.id;
         this.name = guitarEntity.name;
         this.price = guitarEntity.price;
     }
