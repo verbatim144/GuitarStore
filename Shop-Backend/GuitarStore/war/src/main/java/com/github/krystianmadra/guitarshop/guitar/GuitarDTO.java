@@ -2,13 +2,15 @@ package com.github.krystianmadra.guitarshop.guitar;
 
 import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 
+import java.math.BigDecimal;
+
 public class GuitarDTO {
 
     private Long id;
     private String name;
-    private double price;
+    private BigDecimal price;
 
-    public GuitarDTO(Long id, String name, double price){
+    public GuitarDTO(Long id, String name, BigDecimal price){
         this.id = id;
         this.name = name;
         this.price = price;
@@ -38,11 +40,11 @@ public class GuitarDTO {
         this.name = name;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

@@ -6,7 +6,6 @@ public class GuitarDTOToEntity {
 
     public static GuitarEntity toEntity(GuitarDTO entity){
         GuitarEntity ret = new GuitarEntity();
-        ret.setId(entity.getId());
         ret.setName(entity.getName());
         ret.setPrice(entity.getPrice());
         return ret;
