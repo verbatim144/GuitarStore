@@ -1,10 +1,7 @@
 package com.github.krystianmadra.guitarshop.entities;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import java.util.List;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "GUITAR_CATEGORY")
@@ -12,7 +9,7 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
 
     private String name;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<GuitarEntity> guitarList;
+    private Set<GuitarEntity> guitarList;
 
     public GuitarCategoryEntity() {
     }
@@ -29,7 +26,7 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.name = name;
     }
 
-    public List<GuitarEntity> getGuitarList() {
+    public Set<GuitarEntity> getGuitarList() {
         return guitarList;
     }
 
