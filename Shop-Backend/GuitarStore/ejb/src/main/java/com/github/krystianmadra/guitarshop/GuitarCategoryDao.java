@@ -1,6 +1,7 @@
 package com.github.krystianmadra.guitarshop;
 
 import com.github.krystianmadra.guitarshop.entities.GuitarCategoryEntity;
+import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -17,8 +18,8 @@ public class GuitarCategoryDao {
     public GuitarCategoryDao() {
     }
 
-    public Optional<GuitarCategoryEntity> getGuitarByName(String name){
-        TypedQuery<GuitarCategoryEntity> query = em.createQuery("select new GuitarCategoryEntity(g.name) from GuitarCategoryEntity g where g.name = :name", GuitarCategoryEntity.class);
+    public Optional<GuitarCategoryEntity> getGuitarCategoryByName(String name){
+        TypedQuery<GuitarCategoryEntity> query = em.createQuery("from GuitarCategoryEntity as g where g.name = :name", GuitarCategoryEntity.class);
         query.setParameter("name", name);
 
         GuitarCategoryEntity ret = query.getSingleResult();

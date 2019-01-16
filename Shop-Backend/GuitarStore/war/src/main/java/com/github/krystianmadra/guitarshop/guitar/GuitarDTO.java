@@ -16,7 +16,6 @@ public class GuitarDTO {
         this.price = price;
     }
 
-
     public GuitarDTO(GuitarEntity entity) {
         id = entity.getId();
         name = entity.getName();

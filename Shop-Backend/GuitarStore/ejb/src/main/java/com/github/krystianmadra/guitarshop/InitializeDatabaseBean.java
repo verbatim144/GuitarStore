@@ -29,7 +29,7 @@ public class InitializeDatabaseBean {
 
         List<OpinionEntity> opinionEntityList = new ArrayList<>();
         OpinionEntity op = new OpinionEntity(5l,5,"good good");
-        opinionEntityList.add(new OpinionEntity(5l,5,"good good"));
+        opinionEntityList.add(op);
 
         GuitarEntity sampleGuitar1 = new GuitarEntity(6l,"Electric sample", new BigDecimal(1200L), electric);
         GuitarEntity sampleGuitar2 = new GuitarEntity(7l,"Classic sample", new BigDecimal(1200L), classic);

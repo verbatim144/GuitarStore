@@ -56,7 +56,7 @@ public class GuitarRestful {
     @PUT
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
-    public Response editBook(GuitarDTO guitar) {
+    public Response editGuitar(GuitarDTO guitar) {
         guitarDao.update(GuitarDTOToEntity.toEntity(guitar));
         return Response.status(200).entity(guitar).build();
     }
