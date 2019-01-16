@@ -1,0 +1,167 @@
+.container-fluid{
+  margin-top: 200px;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1{
+  color: white;
+  font-family: Roboto;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 35px;
+}
+
+h2{
+  color: white;
+  opacity: .4;
+  font-family: Roboto;
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.phone{
+  background-color: #E14658;
+  width: 250px;
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: Roboto;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 100px;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+label{
+  color: white;
+  font-family: Roboto;
+  font-size: 15px;
+  margin: auto;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid white;
+  width: 20vw;
+  height: auto;
+  color: white;
+  font-family: Roboto;
+  font-size: 20px;
+  margin: auto;
+}
+
+select{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid white;
+  width: 20vw;
+  height: auto;
+  color: #898989;
+  font-family: Roboto;
+  font-size: 20px;
+  margin: auto;
+}
+
+select option{
+  margin: 40px;
+  background-color: transparent;
+  color: #444;
+}
+
+.message{
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  width: 50vw;
+}
+
+textarea::placeholder{
+  color: white;
+}
+
+.btn-send{
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.btn-send:hover{
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 991px){
+  .container-fluid{
+    margin-top: 100px;
+  }
+
+  h1{
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+
+  h2{
+    font-size: 15px;
+  }
+
+  .phone{
+    font-size: 17px;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .form-group{
+    margin: 10px;
+  }
+
+  input, select{
+    width: 70vw;
+  }
+
+  .message{
+    width: 70vw;
+  }
+
+
+  input::placeholder, select:optional{
+    font-size: 18px;
+  }
+
+  .btn-send{
+    width: 100px;
+    height: 50px;
+  }
+}
