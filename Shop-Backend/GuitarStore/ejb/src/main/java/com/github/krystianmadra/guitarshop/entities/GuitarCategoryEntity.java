@@ -9,7 +9,7 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
 
     private String name;
     @OneToMany(mappedBy = "guitarCategory")
-    private Set<GuitarEntity> guitarList;
+    private Set<GuitarEntity> guitarSet;
 
     public GuitarCategoryEntity() {
     }
@@ -19,8 +19,8 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.name = categoryName;
     }
 
-    public void setGuitarList(Set<GuitarEntity> guitarList) {
-        this.guitarList = guitarList;
+    public void setGuitarSet(Set<GuitarEntity> guitarList) {
+        this.guitarSet = guitarList;
     }
 
     public GuitarCategoryEntity(Long id) {
@@ -35,8 +35,8 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.name = name;
     }
 
-    public Set<GuitarEntity> getGuitarList() {
-        return guitarList;
+    public Set<GuitarEntity> getGuitarSet() {
+        return guitarSet;
     }
 
 }
