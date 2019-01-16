@@ -11,7 +11,6 @@ public abstract class AbstractBaseEntity {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private String uuid;
-    private String comment;
     @Version
     private Integer version;
 
@@ -31,14 +30,6 @@ public abstract class AbstractBaseEntity {
 
     public Long getId() {
         return id;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 
     public Integer getVersion() {

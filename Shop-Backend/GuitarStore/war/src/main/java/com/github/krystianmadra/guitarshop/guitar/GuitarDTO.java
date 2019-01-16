@@ -23,7 +23,6 @@ public class GuitarDTO {
         price = entity.getPrice();
     }
 
-
     public Long getId() {
         return id;
     }

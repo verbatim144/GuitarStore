@@ -8,10 +8,19 @@ import java.util.Set;
 public class GuitarCategoryEntity extends AbstractBaseEntity {
 
     private String name;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "guitarCategory")
     private Set<GuitarEntity> guitarList;
 
     public GuitarCategoryEntity() {
+    }
+
+    public GuitarCategoryEntity(Long id, String categoryName) {
+        super(id);
+        this.name = categoryName;
+    }
+
+    public void setGuitarList(Set<GuitarEntity> guitarList) {
+        this.guitarList = guitarList;
     }
 
     public GuitarCategoryEntity(Long id) {
