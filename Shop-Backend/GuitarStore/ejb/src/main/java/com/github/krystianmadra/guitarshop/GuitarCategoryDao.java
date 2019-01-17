@@ -19,11 +19,21 @@ public class GuitarCategoryDao {
     }
 
     public Optional<GuitarCategoryEntity> getGuitarCategoryByName(String name){
-        TypedQuery<GuitarCategoryEntity> query = em.createQuery("from GuitarCategoryEntity as g where g.name = :name", GuitarCategoryEntity.class);
+        TypedQuery<GuitarCategoryEntity> query = em.createQuery("select new GuitarCategoryEntity(g.id) from GuitarCategoryEntity g where g.name = :name", GuitarCategoryEntity.class);
         query.setParameter("name", name);
 
         GuitarCategoryEntity ret = query.getSingleResult();
 
         return Optional.of(ret);
     }
+/*
+    public Optional<GuitarCategoryEntity> getGuitarCategoryById(long id){
+        TypedQuery<GuitarCategoryEntity> query = em.createQuery("select new GuitarCategoryEntity(g.id) from GuitarCategoryEntity g where g.id = :id", GuitarCategoryEntity.class);
+        query.setParameter("id", id);
+
+        GuitarCategoryEntity ret = query.getSingleResult();
+
+        return Optional.of(ret);
+    }
+    */
 }

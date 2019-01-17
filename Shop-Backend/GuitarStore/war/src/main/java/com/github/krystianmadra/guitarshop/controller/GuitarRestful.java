@@ -29,6 +29,14 @@ public class GuitarRestful {
     }
 
     @GET
+    @Path("/name/{name}")
+    @Produces("application/json; charset=UTF-8")
+    public Response getById(@PathParam("name") String name) {
+        GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarByName(name).get());
+        return Response.status(200).entity(ret).build();
+    }
+
+    @GET
     @Produces("application/json; charset=UTF-8")
     public Response getAll() {
         List<GuitarShortDTO> ret = guitarDao.getAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());

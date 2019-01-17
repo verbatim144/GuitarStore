@@ -22,22 +22,16 @@ public class InitializeDatabaseBean {
 
     @PostConstruct
     public void init(){
-        GuitarCategoryEntity electric = new GuitarCategoryEntity(1l,"Electric");
-        GuitarCategoryEntity classic = new GuitarCategoryEntity(2l,"Classic");
-        GuitarCategoryEntity acoustic = new GuitarCategoryEntity(3l,"Acoustic");
-        GuitarCategoryEntity bass = new GuitarCategoryEntity(4l,"Bass");
+        GuitarCategoryEntity electric = new GuitarCategoryEntity("Electric");
+        GuitarCategoryEntity classic = new GuitarCategoryEntity("Classic");
+        GuitarCategoryEntity acoustic = new GuitarCategoryEntity("Acoustic");
+        GuitarCategoryEntity bass = new GuitarCategoryEntity("Bass");
 
-        List<OpinionEntity> opinionEntityList = new ArrayList<>();
-        OpinionEntity op = new OpinionEntity(5l,5,"good good");
-        opinionEntityList.add(op);
+        GuitarEntity sampleGuitar1 = new GuitarEntity("ElectricS", 1200L, 2,"Lorem Ipsum", electric);
+        GuitarEntity sampleGuitar2 = new GuitarEntity("ClassicS", 1200L, 2,"Lorem Ipsum",classic);
+        GuitarEntity sampleGuitar3 = new GuitarEntity("AcousticS", 1200L, 2,"Lorem Ipsum",acoustic);
+        GuitarEntity sampleGuitar4 = new GuitarEntity("BassS", 1200L,2,"Lorem Ipsum", bass);
 
-        GuitarEntity sampleGuitar1 = new GuitarEntity(6l,"Electric sample", new BigDecimal(1200L), electric);
-        GuitarEntity sampleGuitar2 = new GuitarEntity(7l,"Classic sample", new BigDecimal(1200L), classic);
-        sampleGuitar2.setOpinionEntities(opinionEntityList);
-        GuitarEntity sampleGuitar3 = new GuitarEntity(8l,"Acoustic sample", new BigDecimal(1200L), acoustic);
-        GuitarEntity sampleGuitar4 = new GuitarEntity(9l,"Bass sample", new BigDecimal(1200L), bass);
-
-        em.persist(op);
         em.persist(sampleGuitar1);
         em.persist(sampleGuitar2);
         em.persist(sampleGuitar3);

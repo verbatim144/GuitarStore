@@ -8,9 +8,9 @@ public class GuitarShortDTO {
 
     private Long id;
     private String name;
-    private BigDecimal price;
+    private double price;
 
-    public GuitarShortDTO(Long id, String name, BigDecimal price){
+    public GuitarShortDTO(Long id, String name, double price){
         this.id = id;
         this.name = name;
         this.price = price;
@@ -44,11 +44,11 @@ public class GuitarShortDTO {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

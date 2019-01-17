@@ -12,8 +12,10 @@ public class OpinionEntity extends AbstractBaseEntity {
     @ManyToOne(cascade = CascadeType.ALL)
     private GuitarEntity guitar;
 
-    public OpinionEntity(Long id, int rate, String shortComment) {
-        super(id);
+    public OpinionEntity() {
+    }
+
+    public OpinionEntity(int rate, String shortComment) {
         this.rate = rate;
         this.shortComment = shortComment;
     }

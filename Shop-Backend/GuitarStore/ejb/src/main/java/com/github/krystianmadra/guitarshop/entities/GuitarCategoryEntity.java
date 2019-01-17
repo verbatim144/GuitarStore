@@ -8,8 +8,8 @@ import java.util.Set;
 public class GuitarCategoryEntity extends AbstractBaseEntity {
 
     private String name;
-    @OneToMany(mappedBy = "guitarCategory")
-    private Set<GuitarEntity> guitarSet;
+    @OneToMany(mappedBy = "category")
+    private Set<GuitarEntity> guitars;
 
     public GuitarCategoryEntity() {
     }
@@ -19,8 +19,12 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.name = categoryName;
     }
 
-    public void setGuitarSet(Set<GuitarEntity> guitarList) {
-        this.guitarSet = guitarList;
+    public GuitarCategoryEntity(String categoryName) {
+        this.name = categoryName;
+    }
+
+    public void setGuitars(Set<GuitarEntity> guitars) {
+        this.guitars = guitars;
     }
 
     public GuitarCategoryEntity(Long id) {
@@ -35,8 +39,8 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.name = name;
     }
 
-    public Set<GuitarEntity> getGuitarSet() {
-        return guitarSet;
+    public Set<GuitarEntity> getGuitars() {
+        return guitars;
     }
 
 }

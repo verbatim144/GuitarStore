@@ -9,34 +9,38 @@ import java.util.List;
 public class GuitarEntity extends AbstractBaseEntity {
 
     private String name;
-    private BigDecimal price;
-    private long amount;
+    private double price;
+    private long quantity;
+    private String description;
     @ManyToOne(cascade = CascadeType.ALL)
-    private GuitarCategoryEntity guitarCategory;
+    private GuitarCategoryEntity category;
 
     @OneToMany(mappedBy = "guitar")
     private List<OpinionEntity> opinionEntities;
 
-    public GuitarEntity(Long id, String name, BigDecimal price, GuitarCategoryEntity guitarCategory){
-        super(id);
+    public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category){
         this.name = name;
         this.price = price;
-        this.guitarCategory = guitarCategory;
+        this.quantity = quantity;
+        this.description = description;
+        this.category = category;
     }
 
     public GuitarEntity(){
-    }
-
-    public long getAmount() {
-        return amount;
-    }
-
-    public void setAmount(long amount) {
-        this.amount = amount;
+        this.category = new GuitarCategoryEntity();
     }
 
     public GuitarEntity(long id){
         super(id);
+        this.category = new GuitarCategoryEntity();
+    }
+
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -47,20 +51,28 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public GuitarCategoryEntity getGuitarCategory() {
-        return guitarCategory;
+    public String getDescription() {
+        return description;
     }
 
-    public void setGuitarCategory(GuitarCategoryEntity guitarCategory) {
-        this.guitarCategory = guitarCategory;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public GuitarCategoryEntity getCategory() {
+        return category;
+    }
+
+    public void setCategory(GuitarCategoryEntity category) {
+        this.category = category;
     }
 
     public List<OpinionEntity> getOpinionEntities() {
@@ -72,7 +84,9 @@ public class GuitarEntity extends AbstractBaseEntity {
     }
 
     public void update(GuitarEntity guitarEntity) {
-        this.name = guitarEntity.name;
-        this.price = guitarEntity.price;
+        this.name = guitarEntity.getName();
+        this.price = guitarEntity.getPrice();
+        this.description = guitarEntity.getDescription();
+        this.quantity = guitarEntity.getQuantity();
     }
 }
