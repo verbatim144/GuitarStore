@@ -10,11 +10,13 @@ public class GuitarShortDTO {
     private String name;
     private double price;
     private String description;
+    private String category;
 
-    public GuitarShortDTO(Long id, String name, double price, String description){
+    public GuitarShortDTO(Long id, String name, double price, String description, String category){
         this.id = id;
         this.name = name;
         this.price = price;
+        this.category = category;
         this.description = description;
     }
 
@@ -30,6 +32,7 @@ public class GuitarShortDTO {
         name = entity.getName();
         price = entity.getPrice();
         description = entity.getDescription();
+        category = entity.getCategory().getName();
     }
 
     public Long getId() {
@@ -62,6 +65,14 @@ public class GuitarShortDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     @Override
