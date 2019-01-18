@@ -2,12 +2,14 @@
   <div class="margin">
     <div class="container-fluid">
       <div class="header">Elektryczne</div>
-      <div class="row">
-        <div *ngFor="let guit of guitars" class="item">
+      <div *ngFor="let guit of guitars" class="row">
+        <div *ngIf="guit.category==='Electric'" class="item">
+
           <img class="guitar" src="../../assets/el_guitar1.png" alt="Guitar 1">
           <h1 #nameInput>{{guit.name}}</h1>
           <h2 #descInput>{{guit.description}}</h2>
           <p #priceInput>{{guit.price}},-zł</p>
+
           <div><button type="button" class="btn btn-success sucesss">Dodaj do koszyka</button><button type="button" class="btn btn-danger liked"><i class="fas fa-heart"></i></button></div>
         </div>
       </div>
