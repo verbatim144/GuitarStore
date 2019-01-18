@@ -1,6 +1,8 @@
 package com.github.krystianmadra.guitarshop.guitar;
 
-import com.github.krystianmadra.guitarshop.GuitarEntity;
+import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
+
+import java.math.BigDecimal;
 
 public class GuitarShortDTO {
 

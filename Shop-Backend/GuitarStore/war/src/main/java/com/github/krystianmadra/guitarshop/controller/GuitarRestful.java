@@ -1,18 +1,20 @@
 package com.github.krystianmadra.guitarshop.controller;
 
 import com.github.krystianmadra.guitarshop.GuitarDao;
-import com.github.krystianmadra.guitarshop.GuitarEntity;
+import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTO;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTOToEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarShortDTO;
 
 import javax.ejb.EJB;
+import javax.faces.bean.RequestScoped;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Path("/guitar")
+@RequestScoped // przez scope provided - do DI
 public class GuitarRestful {
 
     @EJB
@@ -23,6 +25,14 @@ public class GuitarRestful {
     @Produces("application/json; charset=UTF-8")
     public Response getById(@PathParam("id") long id) {
         GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarById(id).get());
+        return Response.status(200).entity(ret).build();
+    }
+
+    @GET
+    @Path("/name/{name}")
+    @Produces("application/json; charset=UTF-8")
+    public Response getById(@PathParam("name") String name) {
+        GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarByName(name).get());
         return Response.status(200).entity(ret).build();
     }
 
@@ -54,7 +64,7 @@ public class GuitarRestful {
     @PUT
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
-    public Response editBook(GuitarDTO guitar) {
+    public Response editGuitar(GuitarDTO guitar) {
         guitarDao.update(GuitarDTOToEntity.toEntity(guitar));
         return Response.status(200).entity(guitar).build();
     }

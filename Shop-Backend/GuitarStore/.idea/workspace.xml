@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
@@ -16,34 +17,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GuitarShortDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
+      <file leaf-file-name="GuitarEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding>
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarRestful.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ear/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="561">
+              <caret line="67" column="10" lean-forward="true" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuitarCategoryEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuitarCategoryRestful.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarCategoryRestful.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,72 +66,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarDTOToEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
+      <file leaf-file-name="GuitarCategoryDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarCategoryDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="GuitarDTO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding>
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#609#610#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#683#684#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="12" selection-start-line="12" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarEntity.java">
+      <file leaf-file-name="InitializeDatabaseBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/InitializeDatabaseBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <element signature="e#786#787#0" expanded="true" />
-                <element signature="e#820#821#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JaxRSConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/JaxRSConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="524">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,30 +104,31 @@
       <file leaf-file-name="GuitarDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="697">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarRestfulTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
+      <file leaf-file-name="GuitarRestful.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="13" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuitarCategoryDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarCategoryDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war-test/target/test-classes/controller/all.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -173,16 +151,28 @@
         <option value="$PROJECT_DIR$/ear/pom.xml" />
         <option value="$PROJECT_DIR$/ejb/pom.xml" />
         <option value="$PROJECT_DIR$/war-test/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java" />
         <option value="$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarEntity.java" />
-        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java" />
         <option value="$PROJECT_DIR$/war/pom.xml" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/GuitarDTO.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/GuitarShortDTO.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/ManufacturerEntity.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/AbstractBaseEntity.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/OpinionEntity.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/InitializeDatabaseBean.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarCategoryDao.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarCategoryDTO.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarCategoryRestful.java" />
       </list>
     </option>
   </component>
@@ -192,20 +182,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1075" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="137" />
+    <option name="y" value="95" />
+    <option name="width" value="1160" />
+    <option name="height" value="755" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,6 +281,36 @@
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
               <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="github" type="462c0819:PsiDirectoryNode" />
+              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
+              <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
+              <item name="ejb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
@@ -388,221 +414,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-              <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-              <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-test-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-              <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
-              <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuitarStore" type="462c0819:PsiDirectoryNode" />
-              <item name="war-test" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../bookstore/uam_bookstore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.krystianmadra.guitarshop.entities" />
       <recent name="com.github.krystianmadra.guitarshop" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\Shop-Backend\GuitarStore\ejb\src\main\resources" />
       <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\Shop-Backend\GuitarStore\war-test\target\test-classes" />
       <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\GuitarStore\Shop-Backend\GuitarStore\war-test\src\test\resources\controller" />
       <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\GuitarStore\Shop-Backend\GuitarStore\war-test" />
       <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\GuitarStore\Shop-Backend\GuitarStore\war-test\src" />
-      <recent name="D:\PROJEKTY\ZAAW_Jav\GuitarStore\GuitarStore\Shop-Backend\GuitarStore\war\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -754,6 +591,20 @@
       <workItem from="1542822359430" duration="222000" />
       <workItem from="1542822729224" duration="3403000" />
       <workItem from="1543433594016" duration="4096000" />
+      <workItem from="1544373684006" duration="72000" />
+      <workItem from="1544373818360" duration="178000" />
+      <workItem from="1544691567781" duration="641000" />
+      <workItem from="1544692669469" duration="1945000" />
+      <workItem from="1544700879581" duration="19000" />
+      <workItem from="1544976765423" duration="5153000" />
+      <workItem from="1544990056440" duration="358000" />
+      <workItem from="1545065682751" duration="25000" />
+      <workItem from="1545232687800" duration="4139000" />
+      <workItem from="1545238331444" duration="1926000" />
+      <workItem from="1545296497237" duration="790000" />
+      <workItem from="1547554731004" duration="40000" />
+      <workItem from="1547577748321" duration="9923000" />
+      <workItem from="1547657239398" duration="3073000" />
     </task>
     <servers />
   </component>
@@ -787,25 +638,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7721000" />
+    <option name="totallyTimeSpent" value="36690000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="860" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.111979164" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32914925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32914925" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4539007" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24283855" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
@@ -817,11 +667,13 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info id="Persistence" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299389" />
     </layout>
   </component>
@@ -837,6 +689,99 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/war-test/src/test/resources/controller/1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/NewSessionBean.java" />
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java" />
+    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/JaxRSConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="22" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/etc/mysql-connector/module.xml" />
+    <entry file="file://$PROJECT_DIR$/etc/standalone.xml" />
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/war-test/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -844,27 +789,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java" />
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -876,20 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,9 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,9 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,16 +846,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ear/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/pom.xml">
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java" />
+    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="578">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/war/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/NewSessionBean.java" />
     <entry file="file://$PROJECT_DIR$/war-test/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -958,83 +869,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/NewSessionBean.java">
+    <entry file="file://$PROJECT_DIR$/war/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java">
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/ManufacturerEntity.java" />
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="119">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war-test/target/test-classes/controller/1.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war-test/target/test-classes/controller/all.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1043,70 +903,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/JaxRSConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="85">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/AbstractBaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/OpinionEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ear/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="67" column="10" lean-forward="true" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/InitializeDatabaseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarCategoryDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="425">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" selection-start-line="12" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarCategoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarCategoryRestful.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1115,3 +1032,5 @@
     </entry>
   </component>
 </project>
+=======
+>>>>>>> b3d5fa38e62a884ce1ad514f1de49b59a11157aa

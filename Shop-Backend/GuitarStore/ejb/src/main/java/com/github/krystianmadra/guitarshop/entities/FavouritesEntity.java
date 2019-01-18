@@ -1,0 +1,50 @@
+package com.github.krystianmadra.guitarshop.entities;
+
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
+@Table(name = "FAVOURITES")
+public class FavouritesEntity{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
+    @OneToOne(mappedBy = "favourites")
+    private UserEntity user;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<GuitarEntity> guitars;
+
+    public FavouritesEntity(Long id, UserEntity user, Set<GuitarEntity> guitars) {
+        this.id = id;
+        this.user = user;
+        this.guitars = guitars;
+    }
+
+    public FavouritesEntity() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public UserEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UserEntity user) {
+        this.user = user;
+    }
+
+    public Set<GuitarEntity> getGuitars() {
+        return guitars;
+    }
+
+    public void setGuitars(Set<GuitarEntity> guitars) {
+        this.guitars = guitars;
+    }
+}

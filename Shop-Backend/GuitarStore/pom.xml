@@ -9,8 +9,8 @@
     <modules>
         <module>war</module>
         <module>war-test</module>
-        <module>ear</module>
         <module>ejb</module>
+        <module>ear</module>
     </modules>
 
     <properties>
