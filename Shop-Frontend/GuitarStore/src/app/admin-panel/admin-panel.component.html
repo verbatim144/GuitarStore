@@ -1,3 +1,43 @@
+<div class="bgc">
+
+  <div class="row">
+    <div class="col-md-2">
+        <div class="card-or" style="width: 18rem;">
+          <div class="card-body">
+             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <a href="#" class="card-link" style="color: white">Zamówień</a>
+           </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card-op" style="width: 18rem;">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <a href="#" class="card-link" style="color: white">Zamówień</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card-guit" style="width: 18rem;">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <a href="#" class="card-link glyphicon glyphicon-shopping-cart" style="color: white">Zamówień</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="card-cl" style="width: 18rem;">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <a href="#" class="card-link glyphicon glyphicon-shopping-cart" style="color: white">Zamówień</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: block">
+    <canvas></canvas>
+  </div>
 
 <section id="contact">
   <div class="section-content">
@@ -7,8 +47,8 @@
     <div class="container" style="padding-bottom: 200px">
       <form>
         <div class="form-group">
-          <input style="width:400px; font-size: 18px; color: #444444" type="text" class="form-control" id="sa" placeholder=" Wyszukaj">
-          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
+          <input #findInput style="width:400px; font-size: 18px; color: #444444" type="text" class="form-control" id="sa" placeholder="Wyszukaj">
+          <button (click)=findGuitar(findInput.value) style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
         </div>
         <div class="row">
         <div class="col-md-6 form-line">
@@ -26,10 +66,11 @@
           </div>
           <div class="form-group">
             <input style="width:400px; font-size: 18px;" type="number" class="form-control" placeholder="Ilość"
-                   [(ngModel)]="guitar.amount" name="amount" #value="ngModel">
+                   [(ngModel)]="guitar.quantity" name="amount" #value="ngModel">
           </div>
           <div class="form-group">
-            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="" placeholder="Nazwa">
+            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="" placeholder="Nazwa"
+                   [(ngModel)]="guitar.name" name="name" #value="ngModel">
           </div>
           <div class="form-group">
             <textarea style="width:400px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; " class="form-control" id="description" placeholder="Krótki opis"
@@ -39,26 +80,47 @@
             <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
                     [(ngModel)]="guitar.price" name="price" #value="ngModel">
           </div>
-          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
+          <button (click)="addGuitar()" style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Dodaj</button>
         </div>
-        <div class="col-md-6">
+        <div *ngIf="identify===1" class="col-md-6">
           <h2 style="text-align: center; color: white; padding-bottom: 10px">Wyszukany produkt</h2>
           <h5 style="text-align: center; color: white; padding-bottom: 30px; color: #0b8e17">Guitar-Master 12</h5>
           <div class="form-group">
             <textarea style="width:400px;font-size: 18px; margin-left: auto; margin-right: auto; display: block; margin-top: 50px" class="form-control" id="description" placeholder="Krótki opis"
-                      [(ngModel)]="guitar.description" name="description" #value="ngModel"></textarea>
-          </div>
+                      [(ngModel)]="guitarFind.description" name="description" #value="ngModel"></textarea>
+        </div>
           <div class="form-group">
             <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
-                    [(ngModel)]="guitar.price" name="price" #value="ngModel">
+                    [(ngModel)]="guitarFind.price" name="price" #value="ngModel">
           </div>
-          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Edytuj</button>
+          <div class="row">
+            <button (click)=updateGuitar() style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Edytuj</button>
+            <button (click)=deleteGuitar() style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Usuń</button>
+          </div>
+
         </div>
         </div>
       </form>
+      <table class="table  table-striped" style="background-color: white; color: black; margin-top: 50px;">
+        <thead class="thead" style="color: #2d2a30">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  *ngFor="let guit of guitars">
+          <th scope="row">{{guit.id}}</th>
+          <td>{{guit.name}}</td>
+          <td>{{guit.description}}</td>
+          <td>{{guit.price}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
+
   </div>
-
-
 </section>
-
+</div>
