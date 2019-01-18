@@ -10,18 +10,20 @@ public class FavouritesEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
-    @OneToOne(mappedBy = "favourites")
+
+    @OneToOne
     private UserEntity user;
-    @OneToMany(cascade = CascadeType.ALL)
+
+    @ManyToMany
     private Set<GuitarEntity> guitars;
+
+    public FavouritesEntity() {
+    }
 
     public FavouritesEntity(Long id, UserEntity user, Set<GuitarEntity> guitars) {
         this.id = id;
         this.user = user;
         this.guitars = guitars;
-    }
-
-    public FavouritesEntity() {
     }
 
     public Long getId() {

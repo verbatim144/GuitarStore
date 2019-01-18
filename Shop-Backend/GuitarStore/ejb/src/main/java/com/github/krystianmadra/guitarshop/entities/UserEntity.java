@@ -10,24 +10,26 @@ public class UserEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
-    @OneToOne
-    private FavouritesEntity favourites;
-    @OneToOne
-    private ShoppingCartEntity shoppingCart;
-    @OneToMany(mappedBy = "user")
-    private List<OrderEntity> orders;
-
     private String username;
     private String password;
     private String email;
 
-    public UserEntity(FavouritesEntity favourites, List<OrderEntity> orders, ShoppingCartEntity shoppingCart, String username, String password, String email) {
-        this.favourites = favourites;
-        this.shoppingCart = shoppingCart;
-        this.username = username;
-        this.orders = orders;
-        this.password = password;
-        this.email = email;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private AddressEntity address;
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private FavouritesEntity favourites;
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private ShoppingCartEntity shoppingCart;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<OrderEntity> orders;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<OpinionEntity> opinions;
+
+    public UserEntity() {
     }
 
     public UserEntity(String username, String password, String email) {
@@ -36,7 +38,14 @@ public class UserEntity{
         this.email = email;
     }
 
-    public UserEntity() {
+    public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email) {
+        this.favourites = favourites;
+        this.shoppingCart = shoppingCart;
+        this.opinions = opinions;
+        this.address = address;
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     public Long getId() {
@@ -45,14 +54,6 @@ public class UserEntity{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public List<OrderEntity> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<OrderEntity> orders) {
-        this.orders = orders;
     }
 
     public FavouritesEntity getFavourites() {
@@ -75,6 +76,17 @@ public class UserEntity{
         this.username = username;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public List<OpinionEntity> getOpinions() {
+        return opinions;
+    }
+
+    public void setOpinions(List<OpinionEntity> opinions) {
+        this.opinions = opinions;
+    }
 
     public void setPassword(String password) {
         this.password = password;

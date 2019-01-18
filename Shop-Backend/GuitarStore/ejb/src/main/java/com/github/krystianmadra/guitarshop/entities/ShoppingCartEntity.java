@@ -10,10 +10,15 @@ public class ShoppingCartEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
-    @OneToOne(mappedBy = "shoppingCart")
+
+    @OneToOne
     private UserEntity user;
-    @OneToMany(cascade = CascadeType.ALL)
+
+    @ManyToMany
     private Set<GuitarEntity> products;
+
+    public ShoppingCartEntity() {
+    }
 
     public ShoppingCartEntity(Long id, UserEntity user, Set<GuitarEntity> products) {
         this.id = id;
@@ -27,9 +32,6 @@ public class ShoppingCartEntity{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public ShoppingCartEntity() {
     }
 
     public UserEntity getUser() {

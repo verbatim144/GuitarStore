@@ -4,24 +4,27 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "OPINION")
-public class OpinionEntity extends AbstractBaseEntity {
+public class OpinionEntity{
 
-    private String shortComment;
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
     private int rate;
+    private String shortComment;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private GuitarEntity guitar;
+
+    @ManyToOne
+    private UserEntity user;
 
     public OpinionEntity() {
     }
 
-    public OpinionEntity(int rate, String shortComment) {
+    public OpinionEntity(Long id, int rate, String shortComment) {
+        this.id = id;
         this.rate = rate;
         this.shortComment = shortComment;
-    }
-
-    public OpinionEntity(Long id) {
-        super(id);
     }
 
     public GuitarEntity getGuitarEntity() {

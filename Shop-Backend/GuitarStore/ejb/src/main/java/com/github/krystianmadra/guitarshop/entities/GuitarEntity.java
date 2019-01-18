@@ -12,10 +12,11 @@ public class GuitarEntity extends AbstractBaseEntity {
     private double price;
     private long quantity;
     private String description;
-    @ManyToOne(cascade = CascadeType.ALL)
+
+    @ManyToOne
     private GuitarCategoryEntity category;
 
-    @OneToMany(mappedBy = "guitar")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "guitar")
     private List<OpinionEntity> opinionEntities;
 
     public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category){
