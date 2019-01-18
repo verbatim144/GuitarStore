@@ -1,8 +1,9 @@
 package com.github.krystianmadra.guitarshop.entities;
 
 import javax.persistence.*;
+import java.time.Instant;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "ORDERS")
@@ -13,22 +14,24 @@ public class OrderEntity{
     private Long id;
     private Date orderDate;
     private String comments;
+
     @Enumerated
     private OrderState state;
-    @OneToMany(mappedBy = "order")
-    private Set<OrderDetails> ordersDetails;
-    @ManyToOne(cascade = CascadeType.ALL)
+
+    @ManyToOne
     private UserEntity user;
 
-    public OrderEntity(Date orderDate, String comments, OrderState state, Set<OrderDetails> ordersDetails, UserEntity user) {
-        this.orderDate = orderDate;
-        this.comments = comments;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
+    private List<OrderDetails> ordersDetails;
+
+    public OrderEntity() {
+    }
+
+    public OrderEntity(OrderState state, List<OrderDetails> ordersDetails, UserEntity user) {
+        this.orderDate = Date.from(Instant.now());
         this.state = state;
         this.ordersDetails = ordersDetails;
         this.user = user;
-    }
-
-    public OrderEntity() {
     }
 
     public Long getId() {
@@ -63,15 +66,11 @@ public class OrderEntity{
         this.state = state;
     }
 
-    public Set<OrderDetails> getOrdersDetails() {
+    public List<OrderDetails> getOrdersDetails() {
         return ordersDetails;
     }
 
-    public void setOrdersDetails(Set<OrderDetails> ordersDetails) {
+    public void setOrdersDetails(List<OrderDetails> ordersDetails) {
         this.ordersDetails = ordersDetails;
-    }
-
-    public void setUser(UserEntity user) {
-        this.user = user;
     }
 }
