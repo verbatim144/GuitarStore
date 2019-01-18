@@ -1,56 +1,64 @@
-<div class="container-fluid">
-  <div class="margin"></div>
-  <h1>Witaj w panelu administratora!</h1>
-  <input type="search" class="search" placeholder="Wyszukaj...">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 add">
-      <h2>Dodaj produkt</h2>
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Kategoria</option>
-          <option value="1">Akustyczne</option>
-          <option value="2">Basowe</option>
-          <option value="3">Klasyczne</option>
-          <option value="4">Elektryczne</option>
-          <option value="6">Akcesoria</option>
-        </select>
+
+<section id="contact">
+  <div class="section-content">
+    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+  </div>
+  <div class="contact-section">
+    <div class="container" style="padding-bottom: 200px">
+      <form>
         <div class="form-group">
-          <input type="number" class="form-control" placeholder="Ilość">
+          <input style="width:400px; font-size: 18px; color: #444444" type="text" class="form-control" id="sa" placeholder=" Wyszukaj">
+          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
         </div>
-      </div>
-      <form>
-        <div class="row2">
+        <div class="row">
+        <div class="col-md-6 form-line">
+          <h2 style="text-align: center; color: white; padding-bottom: 30px">Dodaj produkt</h2>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nazwa produktu">
+          <select style="width:400px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; height: 35px" class="form-control" id="inputGroupSelect012"
+                  [(ngModel)]="guitar.category" name="category" #value="ngModel">
+            <option selected>Kategoria</option>
+            <option value="Acoustic">Akustyczne</option>
+            <option value="9">Basowe</option>
+            <option value="5">Klasyczne</option>
+            <option value="3">Elektryczne</option>
+            <option value="6">Akcesoria</option>
+          </select>
           </div>
           <div class="form-group">
-            <textarea type="text" class="form-control" rows="3" placeholder="Krótki opis"></textarea>
+            <input style="width:400px; font-size: 18px;" type="number" class="form-control" placeholder="Ilość"
+                   [(ngModel)]="guitar.amount" name="amount" #value="ngModel">
           </div>
           <div class="form-group">
-            <input type="number" class="form-control" placeholder="Cena">
+            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="" placeholder="Nazwa">
           </div>
+          <div class="form-group">
+            <textarea style="width:400px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; " class="form-control" id="description" placeholder="Krótki opis"
+                      [(ngModel)]="guitar.description" name="description" #value="ngModel"></textarea>
+          </div>
+          <div class="form-group">
+            <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
+                    [(ngModel)]="guitar.price" name="price" #value="ngModel">
+          </div>
+          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
+        </div>
+        <div class="col-md-6">
+          <h2 style="text-align: center; color: white; padding-bottom: 10px">Wyszukany produkt</h2>
+          <h5 style="text-align: center; color: white; padding-bottom: 30px; color: #0b8e17">Guitar-Master 12</h5>
+          <div class="form-group">
+            <textarea style="width:400px;font-size: 18px; margin-left: auto; margin-right: auto; display: block; margin-top: 50px" class="form-control" id="description" placeholder="Krótki opis"
+                      [(ngModel)]="guitar.description" name="description" #value="ngModel"></textarea>
+          </div>
+          <div class="form-group">
+            <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
+                    [(ngModel)]="guitar.price" name="price" #value="ngModel">
+          </div>
+          <button style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Edytuj</button>
+        </div>
         </div>
       </form>
-      <button class="btn btn-success">Dodaj</button>
-    </div>
-    <div class="col-xs-12 col-md-6 searched">
-      <h2>Wyszukany produkt</h2>
-      <button class="btn btn-primary">Edytuj</button>
-      <button class="btn btn-primary">Usuń</button>
-      <form>
-        <div class="row2">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nazwa produktu">
-          </div>
-          <div class="form-group">
-            <textarea type="text" class="form-control" rows="3" placeholder="Krótki opis"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="number" class="form-control" placeholder="Cena">
-          </div>
-        </div>
-      </form>
-      <button class="btn btn-success">Zapisz</button>
     </div>
   </div>
-</div>
+
+
+</section>
+

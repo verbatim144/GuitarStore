@@ -9,6 +9,7 @@ import {AccessoriesComponent} from './accessories/accessories.component';
 import {ContactComponent} from './contact/contact.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 
 
 
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'contact', component:ContactComponent},
   { path: 'login', component:LoginComponent},
   { path: 'register', component:RegisterComponent},
+  { path: 'cart', component:ShoppingCartComponent},
 
   // otherwise redirect to profile
   { path: '**', redirectTo: '/landing' }

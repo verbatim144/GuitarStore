@@ -18,6 +18,7 @@ import { AccessoriesComponent } from './accessories/accessories.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { RegisterComponent } from './register/register.component';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
+    ShoppingCartComponent,
 
   ],
   imports: [

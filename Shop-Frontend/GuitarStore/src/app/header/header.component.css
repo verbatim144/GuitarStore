@@ -1,6 +1,7 @@
 .navbar{
   background-color: #000;
-  opacity: .7;
+  opacity: .8;
+  height: 50px;
 }
 
 .logo{
@@ -142,8 +143,8 @@ input[type=search]{
 }
 
 .panel-default{
-  height: 30px;
-  margin-top: 60px;
+  height: 20px;
+  margin-top: 50px;
   position: fixed;
 
 }
@@ -153,7 +154,7 @@ input[type=search]{
 }
 
 .panel{
-  height: 40px;
+  height: 20px;
   display: block;
   width: 100%;
 }
@@ -171,7 +172,7 @@ input[type=search]{
   justify-content: space-around;
   border-top: 2px solid #C0B3A0;
   background-color: #000;
-  opacity: .7;
+  opacity: .8;
 }
 
 
