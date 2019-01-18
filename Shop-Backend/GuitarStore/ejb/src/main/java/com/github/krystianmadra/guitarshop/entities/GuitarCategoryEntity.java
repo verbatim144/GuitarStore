@@ -8,7 +8,8 @@ import java.util.Set;
 public class GuitarCategoryEntity extends AbstractBaseEntity {
 
     private String name;
-    @OneToMany(mappedBy = "category")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<GuitarEntity> guitars;
 
     public GuitarCategoryEntity() {
@@ -42,5 +43,4 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
     public Set<GuitarEntity> getGuitars() {
         return guitars;
     }
-
 }
