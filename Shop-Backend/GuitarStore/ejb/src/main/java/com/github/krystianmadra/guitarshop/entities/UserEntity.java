@@ -1,6 +1,7 @@
 package com.github.krystianmadra.guitarshop.entities;
 
 import javax.persistence.*;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -13,6 +14,8 @@ public class UserEntity{
     private String username;
     private String password;
     private String email;
+    private String token;
+    private LocalTime tokenExpirationDate;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private AddressEntity address;
@@ -38,14 +41,17 @@ public class UserEntity{
         this.email = email;
     }
 
-    public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email) {
+    public UserEntity(Long id, String username, String password, String email) {
+        this(username, password, email);
+        this.id = id;
+    }
+
+    public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email, String token) {
+        this(username, password, email);
         this.favourites = favourites;
         this.shoppingCart = shoppingCart;
         this.opinions = opinions;
         this.address = address;
-        this.username = username;
-        this.password = password;
-        this.email = email;
     }
 
     public Long getId() {
@@ -70,6 +76,42 @@ public class UserEntity{
 
     public void setShoppingCart(ShoppingCartEntity shoppingCart) {
         this.shoppingCart = shoppingCart;
+    }
+
+    public LocalTime getTokenExpirationDate() {
+        return tokenExpirationDate;
+    }
+
+    public void setTokenExpirationDate(LocalTime tokenExpirationDate) {
+        this.tokenExpirationDate = tokenExpirationDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public AddressEntity getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressEntity address) {
+        this.address = address;
+    }
+
+    public List<OrderEntity> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderEntity> orders) {
+        this.orders = orders;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public void setUsername(String username) {
@@ -98,5 +140,10 @@ public class UserEntity{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void updateToken(String token, LocalTime tokenExpirationDate) {
+        this.token = token;
+        this.tokenExpirationDate = tokenExpirationDate;
     }
 }
