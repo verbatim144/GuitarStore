@@ -25,5 +25,11 @@
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.krystianmadra.guitarshop</groupId>
+            <artifactId>auth</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>
