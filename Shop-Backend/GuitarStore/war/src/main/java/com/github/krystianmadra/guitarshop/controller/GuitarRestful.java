@@ -5,6 +5,7 @@ import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTO;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTOToEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarShortDTO;
+import com.github.krystianmadra.guitarshop.auth.Secured;
 
 import javax.ejb.EJB;
 import javax.faces.bean.RequestScoped;
@@ -37,6 +38,7 @@ public class GuitarRestful {
     }
 
     @GET
+    @Secured
     @Produces("application/json; charset=UTF-8")
     public Response getAll() {
         List<GuitarShortDTO> ret = guitarDao.getAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());
