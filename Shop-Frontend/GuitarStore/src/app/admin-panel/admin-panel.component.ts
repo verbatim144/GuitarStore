@@ -17,6 +17,7 @@ export class AdminPanelComponent implements OnInit {
   guitar = new Guitar();
   submitted = false;
   identify= 0;
+  sumGuitars = 0;
   public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
   public pieChartData:number[] = [300, 500, 100];
   public pieChartType:string = 'pie';
@@ -25,6 +26,8 @@ export class AdminPanelComponent implements OnInit {
 
   ngOnInit() {
     this.getGuitars();
+    this.sumGuitarsQuantity()
+
 
   }
 
@@ -38,6 +41,20 @@ export class AdminPanelComponent implements OnInit {
 
         }
       );
+  }
+
+  sumGuitarsQuantity(){
+    this.guitarService.getAllGuitars()
+      .subscribe(
+        guitars => {
+          this.guitars = guitars;
+          for (let i = 0; i < this.guitars.length; i++) {
+            this.sumGuitars = this.sumGuitars + this.guitars[i].quantity
+            console.log(this.sumGuitars);
+          }
+        }
+      );
+
   }
 
   updateGuitar(){
@@ -65,7 +82,6 @@ export class AdminPanelComponent implements OnInit {
     return this.guitarService.getAllGuitars()
       .subscribe(
         guitars => {
-          console.log(guitars);
           this.guitars = guitars;
         }
       );

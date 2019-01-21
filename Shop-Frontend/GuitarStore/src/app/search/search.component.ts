@@ -1,29 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
+import {HeaderComponent} from '../header/header.component';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   guitars: Guitar[];
   guitarFind = new Guitar;
   guitar = new Guitar();
   submitted = false;
-  identify= 0;
-  sumGuitars = 0;
 
   constructor(private guitarService: GuitarsService) { }
 
   ngOnInit() {
+
   }
 
 
+  getGuitars() {
+    return this.guitarService.getAllGuitars()
+      .subscribe(
+        guitars => {
+          this.guitars = guitars;
+        }
+      );
+  }
+
   findGuitar(name : String){
-    this.identify= this.identify + 1;
     return this.guitarService.getGuitar(name)
       .subscribe(
         guitar => {
@@ -33,4 +41,5 @@ export class HeaderComponent implements OnInit {
         }
       );
   }
+
 }
