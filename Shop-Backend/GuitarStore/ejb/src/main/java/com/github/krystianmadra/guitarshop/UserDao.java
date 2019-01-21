@@ -43,11 +43,10 @@ public class UserDao {
     public UserEntity updateToken(Long id, String token, LocalTime tokenExpirationDate) {
         UserEntity dbUser = getUserById(id).get();
         dbUser.updateToken(token, tokenExpirationDate);
-        UserEntity ret = em.merge(dbUser);
-        return ret;
+        return em.merge(dbUser);
     }
 
-    public void saveUserID(UserEntity user) {
+    public void saveUser(UserEntity user) {
         em.persist(user);
     }
 }
