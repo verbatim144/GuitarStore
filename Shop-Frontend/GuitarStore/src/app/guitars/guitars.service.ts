@@ -18,6 +18,10 @@ export class GuitarsService {
   ) { }
 
   getAllGuitars (): Observable<Guitar[]> {
+    const headers = new Headers();({
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.getItem('token')
+    })
   return this.http.get<Guitar[]>(this.guitarUrl);
 }
 
