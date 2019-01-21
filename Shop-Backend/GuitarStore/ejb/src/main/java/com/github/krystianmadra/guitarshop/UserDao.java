@@ -46,4 +46,8 @@ public class UserDao {
         UserEntity ret = em.merge(dbUser);
         return ret;
     }
+
+    public void saveUserID(UserEntity user) {
+        em.persist(user);
+    }
 }

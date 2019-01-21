@@ -1,6 +1,7 @@
 package com.github.krystianmadra.guitarshop.entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,6 +19,7 @@ public class ShoppingCartEntity{
     private Set<GuitarEntity> products;
 
     public ShoppingCartEntity() {
+        products = new HashSet<>();
     }
 
     public ShoppingCartEntity(Long id, UserEntity user, Set<GuitarEntity> products) {

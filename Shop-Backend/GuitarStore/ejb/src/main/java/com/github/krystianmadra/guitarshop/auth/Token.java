@@ -15,14 +15,13 @@ public class Token {
     private Long userId;
 
     public Token(Long userId) {
-        this(userId, new BigInteger(130, random).toString(32));
+        this(new BigInteger(130, random).toString(32));
         this.userId = userId;
         this.expirationDate = LocalTime.now().plusMinutes(10).plusHours(1);
     }
 
-    public Token(Long userId, String token) {
+    public Token(String token) {
         this.token = token;
-        this.userId = userId;
         this.expirationDate = LocalTime.now().plusMinutes(10);
     }
 

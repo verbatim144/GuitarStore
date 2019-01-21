@@ -6,16 +6,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "ACCOUNT")
-public class UserEntity{
+public class UserEntity extends AbstractBaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private Long id;
-    //@Transient
+    @Transient
     private String username;
-    //@Transient
+    @Transient
     private String password;
-    //@Transient
+    @Transient
     private String email;
     private String token;
     private LocalTime tokenExpirationDate;
@@ -36,6 +33,11 @@ public class UserEntity{
     private List<OpinionEntity> opinions;
 
     public UserEntity() {
+        /*
+        favourites = new FavouritesEntity();
+        shoppingCart = new ShoppingCartEntity();
+        address = new AddressEntity();
+        */
     }
 
     public UserEntity(String username, String password, String email) {
@@ -45,8 +47,10 @@ public class UserEntity{
     }
 
     public UserEntity(Long id, String username, String password, String email) {
-        this(username, password, email);
-        this.id = id;
+        super(id);
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email, String token) {
@@ -57,13 +61,6 @@ public class UserEntity{
         this.address = address;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public FavouritesEntity getFavourites() {
         return favourites;
