@@ -6,13 +6,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "ACCOUNT")
-public class UserEntity extends AbstractBaseEntity{
+public class UserEntity  {
 
-    @Transient
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
     private String username;
-    @Transient
     private String password;
-    @Transient
     private String email;
     private String token;
     private LocalTime tokenExpirationDate;
@@ -33,24 +33,21 @@ public class UserEntity extends AbstractBaseEntity{
     private List<OpinionEntity> opinions;
 
     public UserEntity() {
-        /*
-        favourites = new FavouritesEntity();
-        shoppingCart = new ShoppingCartEntity();
-        address = new AddressEntity();
-        */
+        favourites = new FavouritesEntity(this);
+        shoppingCart = new ShoppingCartEntity(this);
+        address = new AddressEntity(this);
     }
 
     public UserEntity(String username, String password, String email) {
+        this();
         this.username = username;
         this.password = password;
         this.email = email;
     }
 
     public UserEntity(Long id, String username, String password, String email) {
-        super(id);
-        this.username = username;
-        this.password = password;
-        this.email = email;
+        this(username, password, email);
+        this.id = id;
     }
 
     public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email, String token) {
@@ -61,6 +58,13 @@ public class UserEntity extends AbstractBaseEntity{
         this.address = address;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public FavouritesEntity getFavourites() {
         return favourites;

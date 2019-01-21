@@ -22,7 +22,13 @@ public class FavouritesEntity{
         guitars = new HashSet<GuitarEntity>();
     }
 
+    public FavouritesEntity(UserEntity user) {
+        this();
+        this.user = user;
+    }
+
     public FavouritesEntity(Long id, UserEntity user, Set<GuitarEntity> guitars) {
+        this();
         this.id = id;
         this.user = user;
         this.guitars = guitars;

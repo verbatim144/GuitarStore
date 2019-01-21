@@ -19,6 +19,10 @@ public class AddressEntity extends AbstractBaseEntity{
     public AddressEntity() {
     }
 
+    public AddressEntity(UserEntity user) {
+        this.user = user;
+    }
+
     public AddressEntity(Long id, String city, String postalCode, String phone, String street) {
         super(id);
         this.city = city;

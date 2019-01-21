@@ -22,6 +22,11 @@ public class ShoppingCartEntity{
         products = new HashSet<>();
     }
 
+    public ShoppingCartEntity(UserEntity user) {
+        this();
+        this.user = user;
+    }
+
     public ShoppingCartEntity(Long id, UserEntity user, Set<GuitarEntity> products) {
         this.id = id;
         this.user = user;
