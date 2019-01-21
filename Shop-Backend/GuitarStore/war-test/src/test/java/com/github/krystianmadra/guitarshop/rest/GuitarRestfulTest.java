@@ -1,4 +1,4 @@
-package com.github.krystianmadra.guitarshop.controller;
+package com.github.krystianmadra.guitarshop.rest;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;

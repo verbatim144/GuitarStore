@@ -11,8 +11,11 @@ public class UserEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
+    //@Transient
     private String username;
+    //@Transient
     private String password;
+    //@Transient
     private String email;
     private String token;
     private LocalTime tokenExpirationDate;

@@ -5,8 +5,11 @@ import java.util.Set;
 
 @Entity
 @Table(name = "GUITAR_CATEGORY")
-public class GuitarCategoryEntity extends AbstractBaseEntity {
+public class GuitarCategoryEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
@@ -16,8 +19,12 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
     }
 
     public GuitarCategoryEntity(Long id, String categoryName) {
-        super(id);
+        this.id = id;
         this.name = categoryName;
+    }
+
+    public GuitarCategoryEntity(Long id) {
+        this.id = id;
     }
 
     public GuitarCategoryEntity(String categoryName) {
@@ -28,16 +35,20 @@ public class GuitarCategoryEntity extends AbstractBaseEntity {
         this.guitars = guitars;
     }
 
-    public GuitarCategoryEntity(Long id) {
-        super(id);
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Set<GuitarEntity> getGuitars() {

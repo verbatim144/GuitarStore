@@ -15,109 +15,112 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AuthenticationFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/AuthenticationFilter.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GuitarRestful.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/GuitarRestful.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="643">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuitarNotFoundException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/GuitarNotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#208#209#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/LoginManager.java">
+      <file leaf-file-name="GuitarDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#972#973#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/AddressEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AuthenticationRestful.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/AuthenticationRestful.java">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/AuthenticationRestful.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarRestfulWithAuth.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulWithAuth.java">
+      <file leaf-file-name="GuitarDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="459">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GuitarRestful.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
+      <file leaf-file-name="GuitarShortDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Secured.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/Secured.java">
+      <file leaf-file-name="GuitarDTOToEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/UserDao.java">
+      <file leaf-file-name="GuitarEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuitarCategoryEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="439">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+                <element signature="e#1075#1076#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/UserStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Token.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/Token.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -149,10 +152,7 @@
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/GuitarDTO.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/GuitarShortDTO.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/ManufacturerEntity.java" />
-        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java" />
-        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java" />
-        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/AbstractBaseEntity.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/resources/META-INF/persistence.xml" />
@@ -161,10 +161,16 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/InitializeDatabaseBean.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarCategoryDao.java" />
-        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarCategoryDTO.java" />
         <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarCategoryRestful.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/UserEntity.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarNotFoundException.java" />
         <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/LoginManager.java" />
+        <option value="$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java" />
+        <option value="$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/GuitarRestful.java" />
       </list>
     </option>
   </component>
@@ -184,10 +190,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="106" />
-    <option name="y" value="-7" />
-    <option name="width" value="1484" />
-    <option name="height" value="1039" />
+    <option name="x" value="105" />
+    <option name="y" value="-8" />
+    <option name="width" value="1485" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -389,7 +395,7 @@
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
               <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="guitar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
@@ -402,7 +408,7 @@
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="krystianmadra" type="462c0819:PsiDirectoryNode" />
               <item name="guitarshop" type="462c0819:PsiDirectoryNode" />
-              <item name="guitar" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guitarshop" type="b2602c69:ProjectViewProjectNode" />
@@ -468,7 +474,7 @@
           <option name="password" value="Administrator1" />
           <option name="serverGroup" value="" />
           <option name="stagingRemotePath" value="" />
-          <option name="transportHostId" />
+          <option name="transportHostId" value="" />
           <option name="transportStagingTarget">
             <TransportTarget>
               <option name="id" value="e4c968ef-47c2-464e-ab3e-0082bc5fa69e" />
@@ -500,14 +506,14 @@
       <module name="war-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.controller.*" />
+          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.controller.GuitarRestfulTest" />
+      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.rest.GuitarRestfulTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -523,14 +529,14 @@
       <module name="war-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.controller.*" />
+          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.controller.GuitarRestfulTest" />
+      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.rest.GuitarRestfulTest" />
       <option name="METHOD_NAME" value="shouldReturnAllIGuitars" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -546,14 +552,14 @@
       <module name="war-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.controller.*" />
+          <option name="PATTERN" value="com.github.krystianmadra.guitarshop.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.controller.GuitarRestfulTest" />
+      <option name="PACKAGE_NAME" value="com.github.krystianmadra.guitarshop.rest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.krystianmadra.guitarshop.rest.GuitarRestfulTest" />
       <option name="METHOD_NAME" value="shouldReturnWholeGuitarWithId1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -644,6 +650,7 @@
       <workItem from="1547554731004" duration="40000" />
       <workItem from="1547577748321" duration="9923000" />
       <workItem from="1547657239398" duration="3073000" />
+      <workItem from="1548065244419" duration="8308000" />
     </task>
     <servers />
   </component>
@@ -677,68 +684,44 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38113000" />
+    <option name="totallyTimeSpent" value="46604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50065106" side_tool="true" visible="true" weight="0.18620689" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32965517" />
-      <window_info anchor="right" id="Maven Projects" weight="0.32992327" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="right" id="CDI" />
-      <window_info id="Designer" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49934897" visible="true" weight="0.18620689" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32965517" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20898438" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info id="Web" side_tool="true" />
-      <window_info id="Learn" />
-      <window_info id="EJB" side_tool="true" />
-      <window_info id="JavaEE:App" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Persistence" order="3" side_tool="true" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Learn" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32965517" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.111979164" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="CDI" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32914925" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24283855" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Learn" order="2" />
+      <window_info id="EJB" order="2" side_tool="true" />
+      <window_info id="JavaEE:App" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="JSF" order="3" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="JSF" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="8" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.111979164" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299389" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24283855" />
-      <window_info id="EJB" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="JavaEE:App" order="2" side_tool="true" />
-      <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="CDI" order="3" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info id="Persistence" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299389" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,36 +736,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/etc/mysql-connector/module.xml" />
-    <entry file="file://$PROJECT_DIR$/etc/standalone.xml" />
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -819,7 +772,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/GuitarRestful.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
@@ -833,7 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
+    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/rest/GuitarRestfulTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
@@ -862,7 +815,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/model/Product.java" />
-    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulTest.java">
+    <entry file="file://$PROJECT_DIR$/war-test/src/test/java/com/github/krystianmadra/guitarshop/rest/GuitarRestfulTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
@@ -899,20 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/JaxRSConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -924,13 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/OpinionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -965,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarCategoryDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -979,49 +904,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestful.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarCategoryDTO.java" />
     <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarCategoryRestful.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/UserStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/IllegalTokenException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1032,20 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/GuitarRestfulWithAuth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/controller/AuthenticationRestful.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/AddressEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1053,27 +923,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/LoginManager.java">
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="51">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/Secured.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/AuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/OpinionEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/UserStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/entities/GuitarCategoryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/persistence/EntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTOToEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarShortDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/GuitarNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="e#208#209#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/auth/LoginManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ejb/src/main/java/com/github/krystianmadra/guitarshop/GuitarDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/GuitarRestfulWithAuth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/guitar/GuitarDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/AuthenticationRestful.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/src/main/java/com/github/krystianmadra/guitarshop/rest/GuitarRestful.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>

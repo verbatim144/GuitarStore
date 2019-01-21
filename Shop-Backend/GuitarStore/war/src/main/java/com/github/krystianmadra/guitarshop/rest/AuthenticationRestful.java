@@ -1,4 +1,4 @@
-package com.github.krystianmadra.guitarshop.controller;
+package com.github.krystianmadra.guitarshop.rest;
 
 import com.github.krystianmadra.guitarshop.UserDao;
 import com.github.krystianmadra.guitarshop.auth.LoginManager;
@@ -9,8 +9,6 @@ import com.github.krystianmadra.guitarshop.user.UserDTO;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
-import java.time.LocalTime;
-import java.util.Date;
 
 @Path("/login")
 public class AuthenticationRestful {

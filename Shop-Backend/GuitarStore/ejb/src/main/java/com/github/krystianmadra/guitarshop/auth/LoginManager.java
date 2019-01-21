@@ -24,10 +24,7 @@ public class LoginManager {
 
     public Long getUserIdFromToken(String aTokenFromClient) {
         Optional<Token> aToken = storage.stream().filter(token -> token.getToken().equals(aTokenFromClient)).findFirst();
-        if (aToken.isPresent()){
-            return aToken.get().getUserId();
-        }
-        return null;
+        return aToken.map(Token::getUserId).orElse(null);
     }
 
     public boolean checkIfValidToken(String validatedToken){
