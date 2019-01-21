@@ -6,16 +6,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "ACCOUNT")
-public class UserEntity{
+public class UserEntity  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
-    //@Transient
     private String username;
-    //@Transient
     private String password;
-    //@Transient
     private String email;
     private String token;
     private LocalTime tokenExpirationDate;
@@ -36,9 +33,13 @@ public class UserEntity{
     private List<OpinionEntity> opinions;
 
     public UserEntity() {
+        favourites = new FavouritesEntity(this);
+        shoppingCart = new ShoppingCartEntity(this);
+        address = new AddressEntity(this);
     }
 
     public UserEntity(String username, String password, String email) {
+        this();
         this.username = username;
         this.password = password;
         this.email = email;

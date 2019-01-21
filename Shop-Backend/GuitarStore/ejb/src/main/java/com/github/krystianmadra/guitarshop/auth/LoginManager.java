@@ -1,7 +1,5 @@
 package com.github.krystianmadra.guitarshop.auth;
 
-
-import javax.ejb.EJB;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import java.time.LocalTime;
@@ -12,9 +10,6 @@ import java.util.Set;
 @Startup
 @Singleton
 public class LoginManager {
-
-    //@EJB
-    //private UserStorage userStorage;
 
     private final Set<Token> storage;
 
@@ -38,12 +33,4 @@ public class LoginManager {
     public void saveNewToken(Token token){
         storage.add(token);
     }
-
-    /*
-    public String tryToLogin(String username, String password) {
-        Token token = new Token(userStorage.tryToLogin(username,password));
-        storage.add(token);
-        return token.getToken();
-    }
-    */
 }

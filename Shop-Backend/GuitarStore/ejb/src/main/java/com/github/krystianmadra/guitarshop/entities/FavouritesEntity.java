@@ -1,6 +1,7 @@
 package com.github.krystianmadra.guitarshop.entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -18,9 +19,16 @@ public class FavouritesEntity{
     private Set<GuitarEntity> guitars;
 
     public FavouritesEntity() {
+        guitars = new HashSet<GuitarEntity>();
+    }
+
+    public FavouritesEntity(UserEntity user) {
+        this();
+        this.user = user;
     }
 
     public FavouritesEntity(Long id, UserEntity user, Set<GuitarEntity> guitars) {
+        this();
         this.id = id;
         this.user = user;
         this.guitars = guitars;

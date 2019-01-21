@@ -56,6 +56,7 @@ public class GuitarDao {
     public GuitarEntity addGuitar(GuitarEntity guitar) {
         GuitarCategoryEntity dbGC = getGuitarCategoryByName(guitar.getCategory().getName()).get();
         guitar.setCategory(dbGC);
+
         em.persist(guitar);
 
         return guitar;
