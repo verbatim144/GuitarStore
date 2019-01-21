@@ -1,126 +1,158 @@
 <div class="bgc">
+  <div class="d-flex justify-content-around">
 
-  <div class="row">
-    <div class="col-md-2">
-        <div class="card-or" style="width: 18rem;">
-          <div class="card-body">
-             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <a href="#" class="card-link" style="color: white">Zamówień</a>
-           </div>
-        </div>
-    </div>
-    <div class="col-md-2">
-      <div class="card-op" style="width: 18rem;">
+    <div>
+      <div class="card-or" style="width: 18rem;">
+        <p class="pr-desc">Nowych zamówień</p>
         <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <a href="#" class="card-link" style="color: white">Zamówień</a>
+          <div class="row">
+            <i class="fas fa-shopping-cart"
+               style="color: white; font-size: 55px; margin-top: -25px;"></i>
+            <div class="cart-number" style="margin-left: 90px; margin-top: -38px; font-size: 50px">38</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2">
+    <div>
+      <div class="card-op" style="width: 18rem;">
+
+        <div class="card-body">
+          <p class="pr-desc-us">Użytkowników</p>
+          <div class="row">
+            <i class="fas fa-user-alt" style="color: white; font-size: 55px; margin-top: -5px;"></i>
+            <div class="cart-number" style="margin-left: 90px; margin-top: -20px; font-size: 50px">10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
       <div class="card-guit" style="width: 18rem;">
         <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <a href="#" class="card-link glyphicon glyphicon-shopping-cart" style="color: white">Zamówień</a>
+          <p class="pr-desc-gitary">Gitary pozostałe</p>
+          <div class="row">
+            <i class="fas fa-layer-group" style="color: white; font-size: 55px; margin-top: -5px;"></i>
+            <div class="cart-number" style="margin-left: 90px; margin-top: -20px; font-size: 50px">10</div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2">
+    <div>
       <div class="card-cl" style="width: 18rem;">
         <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <a href="#" class="card-link glyphicon glyphicon-shopping-cart" style="color: white">Zamówień</a>
+          <p class="pr-desc-gitary">Wysłano wiadomości</p>
+          <div class="row">
+            <i class="fas fa-comments" style="color: white; font-size: 55px; margin-top: -5px;"></i>
+            <div class="cart-number" style="margin-left: 90px; margin-top: -20px; font-size: 50px">10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div style="width: 50%">
+      <div class="circle-graph" style="margin-left: 13%; ">
+        <canvas class="canvas" baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+        ></canvas>
+      </div>
+    </div>
+    <div style="height: 650px;  margin-right: 14%">
+
+      <div class="contact-section" style="margin-top: 50px">
+        <div class="container">
+          <div class="panel panel-default"
+               style="width: 420px; height: 470px; background-color: rgba(195,196,204,0.43)  ;display: block; margin-right: auto; margin-left: auto; border-radius: 7px">
+            <div class="panel-heading" style="font-size: 20px; padding-bottom: 30px; height: 50px">DODAJ GITARĘ
+            </div>
+            <div class="panel-body">
+              <div class="form-group">
+                <select
+                  style="width:380px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; height: 35px"
+                  class="form-control" id="inputGroupSelect012"
+                  [(ngModel)]="guitar.category" name="category" #value="ngModel">
+                  <option value="Acoustic">Acoustic</option>
+                  <option value="Bass">Basowe</option>
+                  <option value="Classic">Klasyczne</option>
+                  <option value="Electric">Elektryczne</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input  style="width:380px; font-size: 18px; border: none; font-family: 'Exo', sans-serif; color: #464646;" type="number" class="form-control" placeholder="Ilość"
+                       [(ngModel)]="guitar.quantity" name="amount" #value="ngModel">
+              </div>
+              <div class="form-group">
+                <input style="width:380px; font-size: 18px; border: none; font-family: 'Exo', sans-serif; color: #464646;" type="text" class="form-control" id="" placeholder="Nazwa"
+                       [(ngModel)]="guitar.name" name="name" #value="ngModel">
+              </div>
+              <div class="form-group">
+            <textarea style="width:380px; font-size: 18px; font-family: 'Exo', sans-serif; color: #464646; display: block; border: none; margin-left: auto; margin-right: auto; "
+                      class="form-control" id="description" placeholder="Krótki opis"
+                      [(ngModel)]="guitar.description" name="description" #value="ngModel"></textarea>
+              </div>
+              <div class="form-group">
+                <input style="width:380px; font-size: 18px; border: none; font-family: 'Exo', sans-serif; color: #464646;" type="number" class="form-control" id="telephone"
+                       placeholder=" Cena"
+                       [(ngModel)]="guitar.price" name="price" #value="ngModel">
+              </div>
+              <button (click)="addGuitar()"
+                      style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none; width: 120px"
+                      class="btn btn-primary">Dodaj
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div style="display: block">
-    <canvas></canvas>
-  </div>
-
-<section id="contact">
-  <div class="section-content">
-    <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-  </div>
-  <div class="contact-section">
-    <div class="container" style="padding-bottom: 200px">
-      <form>
-        <div class="form-group">
-          <input #findInput style="width:400px; font-size: 18px; color: #444444" type="text" class="form-control" id="sa" placeholder="Wyszukaj">
-          <button (click)=findGuitar(findInput.value) style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Wyszukaj</button>
-        </div>
-        <div class="row">
-        <div class="col-md-6 form-line">
-          <h2 style="text-align: center; color: white; padding-bottom: 30px">Dodaj produkt</h2>
-          <div class="form-group">
-          <select style="width:400px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; height: 35px" class="form-control" id="inputGroupSelect012"
-                  [(ngModel)]="guitar.category" name="category" #value="ngModel">
-            <option selected>Kategoria</option>
-            <option value="Acoustic">Akustyczne</option>
-            <option value="9">Basowe</option>
-            <option value="5">Klasyczne</option>
-            <option value="3">Elektryczne</option>
-            <option value="6">Akcesoria</option>
-          </select>
-          </div>
-          <div class="form-group">
-            <input style="width:400px; font-size: 18px;" type="number" class="form-control" placeholder="Ilość"
-                   [(ngModel)]="guitar.quantity" name="amount" #value="ngModel">
-          </div>
-          <div class="form-group">
-            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="" placeholder="Nazwa"
-                   [(ngModel)]="guitar.name" name="name" #value="ngModel">
-          </div>
-          <div class="form-group">
-            <textarea style="width:400px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; " class="form-control" id="description" placeholder="Krótki opis"
-                      [(ngModel)]="guitar.description" name="description" #value="ngModel"></textarea>
-          </div>
-          <div class="form-group">
-            <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
-                    [(ngModel)]="guitar.price" name="price" #value="ngModel">
-          </div>
-          <button (click)="addGuitar()" style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px;  background: #E14658; border: none" class="btn btn-primary">Dodaj</button>
-        </div>
-        <div *ngIf="identify===1" class="col-md-6">
-          <h2 style="text-align: center; color: white; padding-bottom: 10px">Wyszukany produkt</h2>
-          <h5 style="text-align: center; color: white; padding-bottom: 30px; color: #0b8e17">Guitar-Master 12</h5>
-          <div class="form-group">
-            <textarea style="width:400px;font-size: 18px; margin-left: auto; margin-right: auto; display: block; margin-top: 50px" class="form-control" id="description" placeholder="Krótki opis"
-                      [(ngModel)]="guitarFind.description" name="description" #value="ngModel"></textarea>
-        </div>
-          <div class="form-group">
-            <input  style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone" placeholder=" Cena"
-                    [(ngModel)]="guitarFind.price" name="price" #value="ngModel">
-          </div>
-          <div class="row">
-            <button (click)=updateGuitar() style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Edytuj</button>
-            <button (click)=deleteGuitar() style="margin-left: auto; margin-right: auto; display: block; margin-top: 85px;  background: #E14658; border: none" class="btn btn-primary">Usuń</button>
-          </div>
-
-        </div>
-        </div>
-      </form>
-      <table class="table  table-striped" style="background-color: white; color: black; margin-top: 50px;">
-        <thead class="thead" style="color: #2d2a30">
-        <tr>
-          <th scope="col">id</th>
-          <th scope="col">Name</th>
-          <th scope="col">Price</th>
-          <th scope="col">Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr  *ngFor="let guit of guitars">
-          <th scope="row">{{guit.id}}</th>
-          <td>{{guit.name}}</td>
-          <td>{{guit.description}}</td>
-          <td>{{guit.price}}</td>
-        </tr>
-        </tbody>
-      </table>
+  <div class="search-product">
+    <div class="form-group">
+      <h2 style="text-align: center; color: #343434">Wyszukaj informację na temat gitary oraz dokonaj zmiany</h2>
+      <input #findInput style="width:400px; font-size: 18px; margin-top: 30px; color: #444444" type="text"
+             class="form-control" id="saa" placeholder="Nazwa gitary">
+      <button (click)=findGuitar(findInput.value)
+              style="margin-left: auto; margin-right: auto; display: block; margin-top: 20px; margin-bottom: 100px; width: 120px;  background: #E14658; border: none;"
+              class="btn btn-primary">Wyszukaj
+      </button>
     </div>
 
+    <div *ngIf="identify===1" style="margin-left: auto; margin-right: auto">
+      <div class="panel panel-default"
+           style="width: 450px; height: 440px; display: block; margin-right: auto; margin-left: auto; border-radius: 7px; margin-bottom: 200px">
+        <div class="panel-heading" style="font-size: 20px; padding-bottom: 30px; height: 50px">Informacja o gitarze
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="telephone"
+                   placeholder=" Cena"
+                   [(ngModel)]="guitarFind.name" name="price" #value="ngModel">
+          </div>
+          <div class="form-group">
+            <textarea
+              style="width:400px;font-size: 18px; margin-left: auto; margin-right: auto; display: block; margin-top: 30px"
+              class="form-control" id="description" placeholder="Krótki opis"
+              [(ngModel)]="guitarFind.description" name="description" #value="ngModel"></textarea>
+          </div>
+          <div class="form-group">
+            <input style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone"
+                   placeholder=" Cena"
+                   [(ngModel)]="guitarFind.price" name="price" #value="ngModel">
+          </div>
+          <div class="row">
+            <button (click)=updateGuitar()
+                    style="margin-left: auto; margin-right: auto; display: block; width: 120px; margin-top: 20px;  background: #E14658; border: none"
+                    class="btn btn-primary">Edytuj
+            </button>
+            <button (click)=deleteGuitar()
+                    style="margin-left: auto; margin-right: auto; display: block; width: 120px; margin-top: 20px;  background: #E14658; border: none"
+                    class="btn btn-primary">Usuń
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 </div>
+
