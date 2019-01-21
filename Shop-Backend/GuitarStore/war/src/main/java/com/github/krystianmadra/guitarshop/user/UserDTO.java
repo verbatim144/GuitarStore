@@ -12,11 +12,9 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String username, String password, String email) {
-        this.id = id;
+    public UserDTO(String username, String password) {
         this.username = username;
         this.password = password;
-        this.email = email;
     }
 
     public UserDTO(UserEntity user) {
