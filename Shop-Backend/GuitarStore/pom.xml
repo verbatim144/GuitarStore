@@ -11,6 +11,7 @@
         <module>war-test</module>
         <module>ejb</module>
         <module>ear</module>
+        <module>auth</module>
     </modules>
 
     <properties>

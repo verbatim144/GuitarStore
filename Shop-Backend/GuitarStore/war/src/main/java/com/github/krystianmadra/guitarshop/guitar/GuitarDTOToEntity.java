@@ -11,7 +11,7 @@ public class GuitarDTOToEntity {
         ret.setPrice(entity.getPrice());
         ret.setQuantity(entity.getQuantity());
         ret.setDescription(entity.getDescription());
-       // ret.setCategory(new GuitarCategoryEntity(entity.getCategory()));
+        ret.setCategory(new GuitarCategoryEntity(entity.getCategory()));
         return ret;
     }
 }

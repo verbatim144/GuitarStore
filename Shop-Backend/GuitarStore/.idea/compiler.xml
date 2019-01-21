@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="auth" />
         <module name="ear" />
         <module name="ejb" />
         <module name="war" />
@@ -13,6 +14,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth" target="1.8" />
       <module name="ear" target="1.8" />
       <module name="ejb" target="1.8" />
       <module name="guitarshop" target="1.8" />
