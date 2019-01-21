@@ -14,11 +14,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import { AcousticComponent } from './acoustic/acoustic.component';
-import { AccessoriesComponent } from './accessories/accessories.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
@@ -32,7 +33,6 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ClassicComponent,
     AdminPanelComponent,
     AcousticComponent,
-    AccessoriesComponent,
     ContactComponent,
     LoginComponent,
     RegisterComponent,
@@ -45,7 +45,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     routing,
     HttpClientModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
