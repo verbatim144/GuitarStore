@@ -20,7 +20,6 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminPanelComponent},
   { path: 'classic', component: ClassicComponent},
   { path: 'bass', component: BassComponent},
-  { path: 'accessories', component: AccessoriesComponent},
   { path: 'contact', component:ContactComponent},
   { path: 'login', component:LoginComponent},
   { path: 'register', component:RegisterComponent},

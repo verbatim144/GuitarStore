@@ -42,7 +42,6 @@ export class ElectricComponent implements OnInit {
     return this.guitarService.getAllGuitars()
       .subscribe(
         guitars => {
-          console.log(guitars);
           this.guitars = guitars;
         }
       );

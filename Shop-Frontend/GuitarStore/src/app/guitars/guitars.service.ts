@@ -22,7 +22,7 @@ export class GuitarsService {
 }
 
 getGuitar(name: String): Observable<Guitar> {
-  const url = `${this.guitarUrl}/${name}`;
+  const url = `${this.guitarUrl+'/name'}/${name}`;
   console.log(url);
 return this.http.get<Guitar>(url);
 }
@@ -30,6 +30,11 @@ return this.http.get<Guitar>(url);
 addGuitar(guitar: Guitar): Observable<Guitar> {
   return this.http.post<Guitar>(this.guitarUrl, guitar, httpOptions);
 }
+
+deleteGuitar(id: number): Observable<Guitar> {
+  const url = `${this.guitarUrl}/${id}`;
+    return this.http.delete<Guitar>(url, httpOptions);
+  }
 
 updateGuitar(guitar: Guitar): Observable<Guitar> {
     return this.http.put<Guitar>(this.guitarUrl, guitar, httpOptions);

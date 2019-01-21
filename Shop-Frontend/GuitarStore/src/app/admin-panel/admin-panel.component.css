@@ -1,5 +1,5 @@
-.container-fluid{
-  background-color: rgba(253, 251, 255, 0.1);
+.bgc{
+  background-image: url("../../assets/GuitarBackground.png");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -7,15 +7,168 @@
   overflow-y: scroll;
 }
 
+.card-or{
+  background-color: rgba(252, 167, 15, 0.86);
+  margin-top: 150px;
+  width: 250px;
+  height: 110px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.canvas{
+  color: white;
+}
+
+.panel-default{
+  background: white;
+}
+
+.card-op{
+  background-color: rgba(228, 19, 35, 0.6);
+  margin-top: 150px;
+  height: 110px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Exo', sans-serif;
+  color: #464646;
+  font-size: 16px;
+}
+
+.card-guit{
+  background-color: rgba(4, 184, 29, 0.7);
+  margin-top: 150px;
+  height: 110px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Exo', sans-serif;
+  color: #464646;
+  font-size: 16px;
+}
+
+.card-cl{
+  background-color: rgba(0, 109, 203, 0.7);
+  margin-top: 150px;
+  height: 110px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Exo', sans-serif;
+  color: #464646;
+  font-size: 16px;
+}
+
+.circle-graph{
+  margin-top: 100px;
+  height: 400px;
+  width: 900px;
+  margin-left: 100%;
+}
+
+.cart-number{
+  margin-left: 160px;
+  margin-right: 50px;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.pr-desc-us{
+  text-align: center;
+  margin-top: -20px;
+  color: white;
+  font-size: 17px;
+
+}
+
+.pr-desc-gitary{
+  text-align: center;
+  margin-top: -20px;
+  color: white;
+  font-size: 17px;
+}
+
+.pr-desc{
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+.pr-desc-mes{
+  margin-top: 60px;
+  margin-left: 85px;
+  position: absolute;
+  color: white;
+  font-size: 17px;
+}
+
+.cart-number-mes{
+  position: absolute;
+  margin-left: 150px;
+  margin-right: 50px;
+  color: white;
+  font-size: 40px;
+}
+
+.panel-heading{
+  background-color: rgba(188, 184, 193, 0.33);
+  height: 45px;
+  padding-top: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  color: rgba(26, 26, 26, 0.89);
+  font-family: 'Exo', sans-serif;
+  color: #464646;
+}
+
+.panel-default{
+  height: 420px;
+}
+
+.list-group-item{
+  height: 45px;
+}
+
+.list-group{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  width: 350px;
+
+}
+
+.list-group-item:hover{
+  background: rgba(163, 163, 163, 0.14);
+}
+
 .margin{
   padding-bottom: 150px;
 }
+
 
 .search{
   font-size: 20px;
   width: 50vw;
   height: 50px;
 }
+
 
 h1{
   display: flex;
@@ -163,5 +316,12 @@ textarea.form-control {
   width: 150px;
   background-color: transparent;
   color: #fff;
+}
+
+.table{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 900px;
 
 }

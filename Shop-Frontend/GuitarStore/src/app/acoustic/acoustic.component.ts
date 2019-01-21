@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Guitar} from '../guitars/guitar';
+import {GuitarsService} from '../guitars/guitars.service';
 
 @Component({
   selector: 'app-acoustic',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcousticComponent implements OnInit {
 
-  constructor() { }
+  guitars: Guitar[];
+
+  constructor(private guitarService: GuitarsService) { }
 
   ngOnInit() {
+    this.getGuitars();
   }
 
+  getGuitars() {
+    return this.guitarService.getAllGuitars()
+      .subscribe(
+        guitars => {
+          this.guitars = guitars;
+        }
+      );
+  }
 }
