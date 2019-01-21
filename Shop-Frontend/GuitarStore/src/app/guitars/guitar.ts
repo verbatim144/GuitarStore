@@ -1,4 +1,4 @@
-import {Category} from '../categories/category';
+
 
 export class Guitar {
   id: number;
