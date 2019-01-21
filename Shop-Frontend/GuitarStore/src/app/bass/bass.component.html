@@ -5,7 +5,7 @@
       <div class="row">
         <div *ngFor="let guit of guitars"  class="container-cards">
         <div *ngIf="guit.category==='Bass'" class="item">
-          <img class="guitar" src="../../assets/el_guitar1.png" alt="Guitar 1">
+          <img class="guitar" src="{{guit.imgUrl}}" alt="Guitar 1">
           <h1 #nameInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.name}}</h1>
           <h2 #descInput style="font-family: 'Amiri', serif;color: #464646; font-size: 16px">{{guit.description}}</h2>
           <p #priceInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.price}},-zł</p>

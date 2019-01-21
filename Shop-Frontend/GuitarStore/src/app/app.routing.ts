@@ -10,6 +10,8 @@ import {ContactComponent} from './contact/contact.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
+import {FavouritesComponent} from './favourites/favourites.component';
+import {SearchComponent} from './search/search.component';
 
 
 
@@ -24,6 +26,8 @@ const appRoutes: Routes = [
   { path: 'login', component:LoginComponent},
   { path: 'register', component:RegisterComponent},
   { path: 'cart', component:ShoppingCartComponent},
+  { path: 'favourite', component:FavouritesComponent},
+  { path: 'search', component:SearchComponent},
 
   // otherwise redirect to profile
   { path: '**', redirectTo: '/landing' }

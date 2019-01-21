@@ -11,12 +11,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="form-inline my-2 my-lg-0">
-      <input class="form-control-s mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn-outline-successs my-2 my-sm-0 search_icon" type="submit" show><i class="fas fa-search"><a
+      <input #findInput class="form-control-s mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button  (click)=findGuitar(findInput.value) class="btn-outline-successs my-2 my-sm-0 search_icon" type="submit" show [routerLink]="['search']"><i class="fas fa-search"><a
         href="#"></a></i></button>
 
       <!--TEMPORARY BUTTON!!-->
       <img [routerLink]= "['cart']" src="../../assets/cart.png" style="width: 49px; height: 43px">
+      <div class="fa fa-heart" style="color: #c93b2f; font-size: 30px" [routerLink]="['favourite']"></div>
       <button class="btn-warning" style="margin-right: 10px; height: 30px" [routerLink]= "['admin']">Panel Admina</button>
       <!---------------------->
 

@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ChartsModule } from 'ng2-charts';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -37,6 +39,8 @@ import { ChartsModule } from 'ng2-charts';
     LoginComponent,
     RegisterComponent,
     ShoppingCartComponent,
+    FavouritesComponent,
+    SearchComponent,
 
   ],
   imports: [

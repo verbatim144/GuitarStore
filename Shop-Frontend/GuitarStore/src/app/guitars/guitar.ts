@@ -7,4 +7,5 @@ export class Guitar {
   description: string;
   category: string;
   quantity: number;
+  imgUrl: string
 }
