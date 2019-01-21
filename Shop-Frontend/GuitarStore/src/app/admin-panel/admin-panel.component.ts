@@ -17,6 +17,9 @@ export class AdminPanelComponent implements OnInit {
   guitar = new Guitar();
   submitted = false;
   identify= 0;
+  public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
+  public pieChartData:number[] = [300, 500, 100];
+  public pieChartType:string = 'pie';
 
   constructor(private guitarService: GuitarsService) { }
 
