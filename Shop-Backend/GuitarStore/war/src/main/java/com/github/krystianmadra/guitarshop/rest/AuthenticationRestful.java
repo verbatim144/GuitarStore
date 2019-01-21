@@ -20,22 +20,37 @@ public class AuthenticationRestful {
     private LoginManager loginManager;
 
     @POST
-    @Consumes("application/json")
+    @Produces("application/json")
     public Response authenticateUser(UserEntity user){
 
         try{
-            Token token = loginManager.tryToLogin(user.getUsername(), user.getPassword());
+            authenticate(user.getUsername(), user.getPassword());
 
-            issueToken(token);
+            UserEntity dbUser = userDao.getUserWithCredentials(user.getUsername(),user.getPassword()).get();
 
-            return Response.ok(token.getToken()).build();
+            Token freshToken = issueToken(dbUser.getId());
+            loginManager.saveNewToken(freshToken);
+
+            String token = freshToken.getToken();
+
+            return Response.ok(token).build();
         } catch (Exception exc){
             return Response.status(Response.Status.UNAUTHORIZED).build();
         }
     }
 
-    private void issueToken(Token token) {
-        userDao.updateToken(token.getUserId(), token.getToken(), token.getExpirationDate());
+    private void authenticate(String username, String password) throws Exception{
+        UserDTO ret = new UserDTO(userDao.getUserWithCredentials(username,password).get());
+        if(ret.getUsername() == null){
+            throw new IllegalArgumentException("There is no user with these credentials");
+        }
+    }
+
+    private Token issueToken(Long userId) {
+        Token token = new Token(userId);
+        userDao.updateToken(userId, token.getToken(), token.getExpirationDate());
+
+        return token;
     }
 
 }
