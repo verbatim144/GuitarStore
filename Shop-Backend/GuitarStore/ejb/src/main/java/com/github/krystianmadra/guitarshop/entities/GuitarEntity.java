@@ -54,6 +54,14 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.name = name;
     }
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     public double getPrice() {
         return price;
     }

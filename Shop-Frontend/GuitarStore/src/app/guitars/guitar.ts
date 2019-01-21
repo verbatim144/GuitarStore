@@ -1,5 +1,3 @@
-import {Category} from '../categories/category';
-
 export class Guitar {
   id: number;
   name: string;
@@ -7,5 +5,5 @@ export class Guitar {
   description: string;
   category: string;
   quantity: number;
-  imgUrl: string
+  imgUrl: string;
 }

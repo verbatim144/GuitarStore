@@ -11,6 +11,7 @@ public class GuitarShortDTO {
     private double price;
     private String description;
     private String category;
+    private String imgUrl;
 
     public GuitarShortDTO(Long id, String name, double price, String description, String category){
         this.id = id;
@@ -33,6 +34,15 @@ public class GuitarShortDTO {
         price = entity.getPrice();
         description = entity.getDescription();
         category = entity.getCategory().getName();
+        imgUrl = entity.getImgUrl();
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public Long getId() {

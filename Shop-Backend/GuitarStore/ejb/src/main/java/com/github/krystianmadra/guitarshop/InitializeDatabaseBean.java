@@ -2,7 +2,6 @@ package com.github.krystianmadra.guitarshop;
 
 import com.github.krystianmadra.guitarshop.entities.GuitarCategoryEntity;
 import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
-import com.github.krystianmadra.guitarshop.entities.OpinionEntity;
 import com.github.krystianmadra.guitarshop.entities.UserEntity;
 
 import javax.annotation.PostConstruct;
