@@ -2,18 +2,22 @@
   <div class="margin">
     <div class="container-fluid">
       <div class="header">Basowe</div>
-      <div *ngFor="let guit of guitars" class="row">
+      <div class="row">
+        <div *ngFor="let guit of guitars"  class="container-cards">
         <div *ngIf="guit.category==='Bass'" class="item">
-
           <img class="guitar" src="../../assets/el_guitar1.png" alt="Guitar 1">
-          <h1 #nameInput>{{guit.name}}</h1>
-          <h2 #descInput>{{guit.description}}</h2>
-          <p #priceInput>{{guit.price}},-zł</p>
+          <h1 #nameInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.name}}</h1>
+          <h2 #descInput style="font-family: 'Amiri', serif;color: #464646; font-size: 16px">{{guit.description}}</h2>
+          <p #priceInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.price}},-zł</p>
 
           <div><button type="button" class="btn btn-success sucesss">Dodaj do koszyka</button><button type="button" class="btn btn-danger liked"><i class="fas fa-heart"></i></button></div>
         </div>
       </div>
     </div>
   </div>
+  </div>
+    <div class="cont" style="height: 100px">
+
+    </div>
 </div>
 
