@@ -3,6 +3,7 @@ package com.github.krystianmadra.guitarshop;
 import com.github.krystianmadra.guitarshop.entities.GuitarCategoryEntity;
 import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 import com.github.krystianmadra.guitarshop.entities.OpinionEntity;
+import com.github.krystianmadra.guitarshop.entities.UserEntity;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -125,6 +126,16 @@ public class InitializeDatabaseBean {
         em.persist(bass9);
         em.persist(bass10);
 
+        UserEntity baska = new UserEntity("Baska","bas123","BassQwe@Lorem.ipsum");
+        UserEntity ania = new UserEntity("Ania","ania123","AnkA1912@Lorem.ipsum");
+        UserEntity zoska = new UserEntity("Zoska","Zos123","ZosKaka@Lorem.ipsum");
 
+        em.persist(baska);
+        em.persist(ania);
+        em.persist(zoska);
+
+        UserEntity admin = new UserEntity("admin","Q9jC23AdgkxI2zA#@0ix","Grzegorz@Lorem.ipsum");
+
+        em.persist(admin);
     }
 }
