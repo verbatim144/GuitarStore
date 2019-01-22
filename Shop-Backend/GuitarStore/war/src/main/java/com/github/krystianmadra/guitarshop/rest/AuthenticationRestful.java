@@ -28,10 +28,8 @@ public class AuthenticationRestful {
 
             UserEntity dbUser = userDao.getUserWithCredentials(user.getUsername(),user.getPassword()).get();
 
-            Token freshToken = issueToken(dbUser.getId());
-            loginManager.saveNewToken(freshToken);
-
-            String token = freshToken.getToken();
+            Token token = issueToken(dbUser.getId());
+            loginManager.saveNewToken(token);
 
             return Response.ok(token).build();
         } catch (Exception exc){

@@ -4,6 +4,7 @@ import {GuitarsService} from '../guitars/guitars.service';
 import { Location } from '@angular/common';
 import {Category} from '../categories/category';
 import {CategoryService} from '../categories/category.service';
+import {LoginService} from '../login-service/login.service';
 
 
 @Component({
@@ -22,10 +23,11 @@ export class ElectricComponent implements OnInit {
 
   constructor(private guitarService: GuitarsService,
               private categoryService: CategoryService,
+              private loginService: LoginService,
               private location: Location) { }
 
   ngOnInit(): void {
-   this.getGuitars();
+   //this.getGuitars();
   }
 
   newGuitar(): void {

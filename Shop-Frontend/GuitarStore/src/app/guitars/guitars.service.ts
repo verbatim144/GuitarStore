@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Guitar} from './guitar';
+import {send} from 'q';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -18,12 +19,9 @@ export class GuitarsService {
   ) { }
 
   getAllGuitars (): Observable<Guitar[]> {
-    const headers = new Headers();({
-      'Content-Type': 'application/json',
-      'Authorization': localStorage.getItem('token')
-    })
-  return this.http.get<Guitar[]>(this.guitarUrl);
-}
+    httpOptions.headers.append('Authorization', 'Bearer ' + localStorage.getItem('userToken'));
+    return this.http.get<Guitar[]>(this.guitarUrl);
+  }
 
 getGuitar(name: String): Observable<Guitar> {
   const url = `${this.guitarUrl+'/name'}/${name}`;

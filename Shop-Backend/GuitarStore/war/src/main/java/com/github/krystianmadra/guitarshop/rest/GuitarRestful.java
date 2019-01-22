@@ -47,6 +47,7 @@ public class GuitarRestful {
     }
 
     @GET
+    @Secured
     @Produces("application/json; charset=UTF-8")
     public Response getAll() {
         List<GuitarShortDTO> ret = guitarDao.getAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());

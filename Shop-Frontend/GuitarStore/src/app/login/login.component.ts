@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../user/user';
 import {LoginService} from '../login-service/login.service';
+import {HttpParams} from '@angular/common/http';
+import {Token} from '../user/Token';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -16,19 +19,16 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-
-  sendUserLogin(){
+  sendUserLogin() {
     this.send();
   }
 
-  private send(): void {
-    this.loginService.loginUser(this.userLogin)
-      .subscribe(
-        res => {
-          localStorage.setItem("token", res.token)
-        },
-      )
+  private send() {
+    return this.loginService.loginUser(this.userLogin).subscribe(
+      (data: any) => {
+        localStorage.setItem('userToken', data.token);
+        localStorage.setItem('expirationDate', data.expirationDate);
+      }
+    );
   }
-
-
 }
