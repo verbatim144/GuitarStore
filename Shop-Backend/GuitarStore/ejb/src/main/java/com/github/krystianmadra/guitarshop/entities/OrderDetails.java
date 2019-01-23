@@ -1,5 +1,7 @@
 package com.github.krystianmadra.guitarshop.entities;
 
+import com.github.krystianmadra.guitarshop.RandomOrderCode;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,9 +12,8 @@ public class OrderDetails {
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private double sum;
-    private int orderNumber;
+    private String orderCode;
     private long quantityOrdered;
-
 
     @ManyToOne
     private OrderEntity order;
@@ -20,14 +21,13 @@ public class OrderDetails {
     @OneToOne
     private GuitarEntity guitar;
 
-
     public OrderDetails() {
     }
 
-    public OrderDetails(OrderEntity order, long quantityOrdered, GuitarEntity guitar, int orderNumber) {
+    public OrderDetails(OrderEntity order, long quantityOrdered, GuitarEntity guitar) {
         this.order = order;
         this.guitar = guitar;
-        this.orderNumber = orderNumber;
+        this.orderCode = RandomOrderCode.randomString(5);
         this.quantityOrdered = quantityOrdered;
         this.sum = quantityOrdered * guitar.getPrice();
     }
@@ -56,12 +56,12 @@ public class OrderDetails {
         this.guitar = guitar;
     }
 
-    public int getOrderNumber() {
-        return orderNumber;
+    public String getOrderCode() {
+        return orderCode;
     }
 
-    public void setOrderNumber(int orderNumber) {
-        this.orderNumber = orderNumber;
+    public void setOrderCode(String orderCode) {
+        this.orderCode = orderCode;
     }
 
     public long getQuantityOrdered() {

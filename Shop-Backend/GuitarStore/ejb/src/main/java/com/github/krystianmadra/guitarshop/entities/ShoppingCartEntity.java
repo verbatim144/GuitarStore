@@ -15,7 +15,7 @@ public class ShoppingCartEntity{
     @OneToOne
     private UserEntity user;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     private Set<GuitarEntity> products;
 
     public ShoppingCartEntity() {
@@ -25,6 +25,12 @@ public class ShoppingCartEntity{
     public ShoppingCartEntity(UserEntity user) {
         this();
         this.user = user;
+    }
+
+    public ShoppingCartEntity(ShoppingCartEntity shoppingCartEntity) {
+        id = shoppingCartEntity.getId();
+        user = shoppingCartEntity.getUser();
+        products = shoppingCartEntity.getProducts();
     }
 
     public ShoppingCartEntity(Long id, UserEntity user, Set<GuitarEntity> products) {
