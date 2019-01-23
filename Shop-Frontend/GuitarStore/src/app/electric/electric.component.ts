@@ -4,6 +4,7 @@ import {GuitarsService} from '../guitars/guitars.service';
 import { Location } from '@angular/common';
 import {Category} from '../categories/category';
 import {CategoryService} from '../categories/category.service';
+import * as moment from 'moment';
 
 
 @Component({
@@ -28,16 +29,6 @@ export class ElectricComponent implements OnInit {
    this.getGuitars();
   }
 
-  newGuitar(): void {
-    this.submitted = false;
-    this.guitar = new Guitar();
-  }
-
-  addGuitar() {
-    this.submitted = true;
-    this.save();
-  }
-
   getGuitars() {
     return this.guitarService.getAllGuitars()
       .subscribe(
@@ -47,31 +38,21 @@ export class ElectricComponent implements OnInit {
       );
   }
 
-  onSelect(selectedItem: any) {
-    console.log("Selected item Id: ", selectedItem.Id); // You get the Id of the selected item here
+
+  public isLoggedIn() {
+    if(localStorage.getItem('userToken')==null){
+      return true;
+    }else{
+      return moment().isBefore(this.getExpiration());
+    }
   }
 
-  /*getGuitarCategory() {
-    return this.categoryService.getCategory("electric")
-      .subscribe(
-        guitarCategory => {
-          console.log(guitarCategory );
-          this.category = guitarCategory ;
-        }
-      );
-  }*/
 
-
-//  refresh(): void {
- //   window.location.reload();
- // }
-
-  private save(): void {
-    console.log(this.guitar);
-    this.guitarService.addGuitar(this.guitar)
-      .subscribe();
+  getExpiration() {
+    const expiration = localStorage.getItem('expirationDate');
+    const expiresAt = JSON.parse(expiration);
+    return moment(expiresAt);
   }
-
 
 
 }

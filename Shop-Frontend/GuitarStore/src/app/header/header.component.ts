@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ export class HeaderComponent implements OnInit {
   submitted = false;
   identify= 0;
   sumGuitars = 0;
+  isLogIn : boolean;
 
   constructor(private guitarService: GuitarsService) { }
 
@@ -32,5 +34,28 @@ export class HeaderComponent implements OnInit {
 
         }
       );
+  }
+
+  logout() {
+    localStorage.removeItem('userToken');
+    localStorage.removeItem('expirationDate');
+  }
+
+  public isLoggedIn() {
+    if(localStorage.getItem('userToken')==null){
+      return true;
+    }else{
+    return moment().isBefore(this.getExpiration());
+    }
+  }
+
+  isLoggedOut() {
+    return !this.isLoggedIn();
+  }
+
+  getExpiration() {
+    const expiration = localStorage.getItem('expirationDate');
+    const expiresAt = JSON.parse(expiration);
+    return moment(expiresAt);
   }
 }
