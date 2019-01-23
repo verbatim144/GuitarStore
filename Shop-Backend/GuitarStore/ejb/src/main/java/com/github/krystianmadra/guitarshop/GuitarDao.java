@@ -38,11 +38,6 @@ public class GuitarDao {
         return Optional.of(ret);
     }
 
-    public void remove(long id) {
-        GuitarEntity dbGuitar = getGuitarById(id).get();
-        em.remove(dbGuitar);
-    }
-
     public GuitarEntity update(GuitarEntity guitarEntity) {
         GuitarEntity dbGuitar = getGuitarById(guitarEntity.getId()).get();
         dbGuitar.update(guitarEntity);
@@ -53,10 +48,14 @@ public class GuitarDao {
         return Optional.of(em.find(GuitarEntity.class, id));
     }
 
+    public void remove(long id) {
+        GuitarEntity dbGuitar = getGuitarById(id).get();
+        em.remove(dbGuitar);
+    }
+
     public GuitarEntity addGuitar(GuitarEntity guitar) {
         GuitarCategoryEntity dbGC = getGuitarCategoryByName(guitar.getCategory().getName()).get();
         guitar.setCategory(dbGC);
-
         em.persist(guitar);
 
         return guitar;

@@ -14,7 +14,7 @@ public class LoginManager {
     private final Set<Token> storage;
 
     public LoginManager() {
-        storage = new HashSet<>(); //todo czyszczenie niewaznych tokenow
+        storage = new HashSet<>();
     }
 
     public Long getUserIdFromToken(String aTokenFromClient) {

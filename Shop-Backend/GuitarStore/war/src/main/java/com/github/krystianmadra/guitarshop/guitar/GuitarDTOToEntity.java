@@ -5,13 +5,13 @@ import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
 
 public class GuitarDTOToEntity {
 
-    public static GuitarEntity toEntity(GuitarDTO entity){
-        GuitarEntity ret = new GuitarEntity(entity.getId());
-        ret.setName(entity.getName());
-        ret.setPrice(entity.getPrice());
-        ret.setQuantity(entity.getQuantity());
-        ret.setDescription(entity.getDescription());
-        ret.setCategory(new GuitarCategoryEntity(entity.getCategory()));
+    public static GuitarEntity toEntity(GuitarDTO dto){
+        GuitarEntity ret = new GuitarEntity();
+        ret.setName(dto.getName());
+        ret.setPrice(dto.getPrice());
+        ret.setQuantity(dto.getQuantity());
+        ret.setDescription(dto.getDescription());
+        ret.setCategory(new GuitarCategoryEntity(dto.getCategory()));
         return ret;
     }
 }

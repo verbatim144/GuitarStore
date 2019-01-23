@@ -11,26 +11,20 @@ public class GuitarDTO {
     private double price;
     private String description;
     private long quantity;
+    private String imgUrl;
     private String category;
 
     public GuitarDTO() {
-    }
-
-    public GuitarDTO(Long id, String name, double price, String description, long quantity, String category){
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.quantity = quantity;
-        this.category = category;
     }
 
     public GuitarDTO(GuitarEntity entity) {
         id = entity.getId();
         name = entity.getName();
         price = entity.getPrice();
-        description = entity.getDescription();
         quantity = entity.getQuantity();
+        description = entity.getDescription();
+        category = entity.getCategory().getName();
+        imgUrl = entity.getImgUrl();
     }
 
     public String getCategory() {
@@ -55,6 +49,14 @@ public class GuitarDTO {
 
     public void setQuantity(long quantity) {
         this.quantity = quantity;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public Long getId() {

@@ -1,5 +1,7 @@
 package com.github.krystianmadra.guitarshop;
 
+import com.github.krystianmadra.guitarshop.entities.Role;
+import com.github.krystianmadra.guitarshop.entities.ShoppingCartEntity;
 import com.github.krystianmadra.guitarshop.entities.UserEntity;
 
 import javax.ejb.Stateless;
@@ -19,6 +21,10 @@ public class UserDao {
     public UserDao(){
     }
 
+    public List<UserEntity> getAllUsers(){
+        return em.createQuery("select u from UserEntity u", UserEntity.class).getResultList();
+    }
+
     public Optional<UserEntity> getUserWithCredentials(String username, String password){
         TypedQuery<UserEntity> query = em.createQuery("select u from UserEntity u where u.username = :username and u.password = :password", UserEntity.class);
         query.setParameter("username", username);
@@ -36,10 +42,6 @@ public class UserDao {
         return Optional.of(ret);
     }
 
-    public List<UserEntity> getAllUsers(){
-        return em.createQuery("select u from UserEntity u", UserEntity.class).getResultList();
-    }
-
     public UserEntity updateToken(Long id, String token, LocalTime tokenExpirationDate) {
         UserEntity dbUser = getUserById(id).get();
         dbUser.updateToken(token, tokenExpirationDate);
@@ -48,5 +50,17 @@ public class UserDao {
 
     public void saveUser(UserEntity user) {
         em.persist(user);
+    }
+
+    public Optional<ShoppingCartEntity> getShoppingCartByUserId(Long id) {
+        TypedQuery<ShoppingCartEntity> query = em.createQuery("select s from ShoppingCartEntity s where s.user.id = :id", ShoppingCartEntity.class);
+        query.setParameter("id", id);
+
+        ShoppingCartEntity ret = query.getSingleResult();
+        return Optional.of(ret);
+    }
+
+    public void UpdateProductsList(ShoppingCartEntity shoppingCartEntity) {
+        em.merge(shoppingCartEntity);
     }
 }

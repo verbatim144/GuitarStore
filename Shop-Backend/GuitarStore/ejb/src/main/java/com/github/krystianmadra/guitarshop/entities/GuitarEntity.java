@@ -20,15 +20,6 @@ public class GuitarEntity extends AbstractBaseEntity {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "guitar")
     private List<OpinionEntity> opinionEntities;
 
-    public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category, String imgUrl){
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-        this.description = description;
-        this.category = category;
-        this.imgUrl = imgUrl;
-    }
-
     public GuitarEntity(){
         this.category = new GuitarCategoryEntity();
     }
@@ -36,6 +27,15 @@ public class GuitarEntity extends AbstractBaseEntity {
     public GuitarEntity(long id){
         super(id);
         this.category = new GuitarCategoryEntity();
+    }
+
+    public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category, String imgUrl){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        this.category = category;
+        this.imgUrl = imgUrl;
     }
 
     public long getQuantity() {
@@ -74,6 +74,14 @@ public class GuitarEntity extends AbstractBaseEntity {
         return category;
     }
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     public void setCategory(GuitarCategoryEntity category) {
         this.category = category;
     }
@@ -91,5 +99,6 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.price = guitarEntity.getPrice();
         this.description = guitarEntity.getDescription();
         this.quantity = guitarEntity.getQuantity();
+        this.imgUrl = guitarEntity.getImgUrl();
     }
 }

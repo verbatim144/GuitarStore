@@ -23,31 +23,24 @@ public class GuitarRestful {
     private GuitarDao guitarDao;
 
     @GET
+    @Secured
     @Path("/{id}")
     @Produces("application/json; charset=UTF-8")
     public Response getById(@PathParam("id") long id) {
-        try{
-            GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarById(id).get());
-            return Response.status(200).entity(ret).build();
-        } catch(Exception ex) {
-            return Response.status(404).entity("Entity not found for id: " + id).build();
-        }
+        GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarById(id).get());
+        return Response.status(200).entity(ret).build();
+
     }
 
     @GET
     @Path("/name/{name}")
     @Produces("application/json; charset=UTF-8")
     public Response getById(@PathParam("name") String name) {
-        try{
-            GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarByName(name).get());
-            return Response.status(200).entity(ret).build();
-        } catch(Exception ex) {
-            return Response.status(404).entity("Entity not found for name: " + name).build();
-        }
+        GuitarDTO ret = new GuitarDTO(guitarDao.getGuitarByName(name).get());
+        return Response.status(200).entity(ret).build();
     }
 
     @GET
-    @Secured
     @Produces("application/json; charset=UTF-8")
     public Response getAll() {
         List<GuitarShortDTO> ret = guitarDao.getAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());
@@ -64,6 +57,7 @@ public class GuitarRestful {
     }
 
     @DELETE
+    @Secured
     @Path("{id}")
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
@@ -73,6 +67,7 @@ public class GuitarRestful {
     }
 
     @PUT
+    @Secured
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
     public Response editGuitar(GuitarDTO guitar) {
