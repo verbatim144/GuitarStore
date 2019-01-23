@@ -4,7 +4,7 @@
 
   <a href="#" class="navbar-brand logo"  [routerLink]= "['landing']">LOGO</a>
 
-  <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" ></span>
   </button>
 
@@ -15,7 +15,9 @@
       <button  (click)=findGuitar(findInput.value) class="btn-outline-successs my-2 my-sm-0 search_icon" type="submit" show [routerLink]="['search']"><i class="fas fa-search"><a
         href="#"></a></i></button>
 
+
       <!--TEMPORARY BUTTON!!-->
+      <button class="btn-warning" style="margin-right: 10px; height: 30px" *ngIf=!isLoggedIn() (click)=logout()>Wylogować się</button>
       <img [routerLink]= "['cart']" src="../../assets/cart.png" style="width: 49px; height: 43px">
       <div class="fa fa-heart" style="color: #c93b2f; font-size: 30px" [routerLink]="['favourite']"></div>
       <button class="btn-warning" style="margin-right: 10px; height: 30px" [routerLink]= "['admin']">Panel Admina</button>
@@ -24,10 +26,10 @@
 
       <ul class="navbar-nav ml-auto" >
         <li class="nav-item">
-          <a class="nav-link-z"  href="#" [routerLink]="['login']">Zaloguj się</a>
+          <a class="nav-link-z" *ngIf=isLoggedIn() href="#" [routerLink]="['login']">Zaloguj się</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-z" href="#" [routerLink]= "['register']">Zarejestruj się</a>
+          <a class="nav-link-z" *ngIf=isLoggedIn() href="#" [routerLink]= "['register']">Zarejestruj się</a>
         </li>
 
 
