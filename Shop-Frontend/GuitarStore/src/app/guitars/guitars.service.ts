@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Guitar} from './guitar';
 
+
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
@@ -10,6 +11,9 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class GuitarsService {
   private guitarUrl = "http://127.0.0.1:8080/war/guitar";
 
@@ -17,13 +21,12 @@ export class GuitarsService {
     private http: HttpClient
   ) { }
 
+
   getAllGuitars (): Observable<Guitar[]> {
-    const headers = new Headers();({
-      'Content-Type': 'application/json',
-      'Authorization': localStorage.getItem('token')
-    })
-  return this.http.get<Guitar[]>(this.guitarUrl);
-}
+
+    httpOptions.headers.append('Authorization', 'Bearer ' + localStorage.getItem('userToken'));
+    return this.http.get<Guitar[]>(this.guitarUrl);
+  }
 
 getGuitar(name: String): Observable<Guitar> {
   const url = `${this.guitarUrl+'/name'}/${name}`;
