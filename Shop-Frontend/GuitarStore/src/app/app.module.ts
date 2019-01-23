@@ -10,7 +10,7 @@ import { BassComponent } from './bass/bass.component';
 import { ClassicComponent } from './classic/classic.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import {routing} from './app.routing';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import { AcousticComponent } from './acoustic/acoustic.component';
@@ -21,6 +21,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ChartsModule } from 'ng2-charts';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
+import {AuthInterceptor} from './interceptors/auth.service';
 
 
 
@@ -52,7 +53,11 @@ import { SearchComponent } from './search/search.component';
     FormsModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [{
+   provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
