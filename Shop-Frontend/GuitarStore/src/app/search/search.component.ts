@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
 import {HeaderComponent} from '../header/header.component';
+import {identity} from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -19,16 +20,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
 
-  }
-
-
-  getGuitars() {
-    return this.guitarService.getAllGuitars()
-      .subscribe(
-        guitars => {
-          this.guitars = guitars;
-        }
-      );
   }
 
   findGuitar(name : String){

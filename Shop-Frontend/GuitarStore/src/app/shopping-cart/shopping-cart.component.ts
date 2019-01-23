@@ -4,6 +4,10 @@ import {Category} from '../categories/category';
 import {GuitarsService} from '../guitars/guitars.service';
 import {CategoryService} from '../categories/category.service';
 import {Location} from '@angular/common';
+import {ShoppingCartServiceService} from '../shopping-cart-service/shopping-cart-service.service';
+import {Cart} from '../shopping-cart-service/cart';
+import {Orders} from '../order-service/order';
+import {OrderService} from '../order-service/order.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -12,28 +16,32 @@ import {Location} from '@angular/common';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  guitars: Guitar[];
-  guitar = new Guitar();
-  submitted = false;
+  products: Cart[];
+  order: Orders;
 
-
-  constructor(private guitarService: GuitarsService,
-              private categoryService: CategoryService,
-              private location: Location) { }
+  constructor(private shoppingService: ShoppingCartServiceService, private orderService: OrderService) { }
 
   ngOnInit(): void {
-    this.getGuitars();
+    this.getProducts();
   }
 
-
-  getGuitars() {
-    return this.guitarService.getAllGuitars()
+  getProducts() {
+    return this.shoppingService.getAllProducts()
       .subscribe(
-        guitars => {
-          console.log(guitars);
-          this.guitars = guitars;
+        products => {
+          this.products = products;
         }
       );
+  }
+
+  addOrder() {
+    this.save();
+  }
+
+  private save(): void {
+    console.log(this.order);
+    this.orderService.addOrder(this.order)
+      .subscribe();
   }
 
 

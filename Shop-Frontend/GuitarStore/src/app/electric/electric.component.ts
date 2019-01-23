@@ -16,9 +16,7 @@ export class ElectricComponent implements OnInit {
 
   guitars: Guitar[];
   guitar = new Guitar();
-  categories: Category[];
   category= new Category();
-  submitted = false;
 
 
   constructor(private guitarService: GuitarsService,
@@ -37,7 +35,6 @@ export class ElectricComponent implements OnInit {
         }
       );
   }
-
 
   public isLoggedIn() {
     if(localStorage.getItem('userToken')==null){

@@ -1,5 +1,5 @@
 .bgc{
-  background-image: url("../../assets/GuitarBackground.png");
+background-color: white;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -257,9 +257,6 @@ form .row2 input, form .row2 textarea, .add .form-control{
 .btn-success{
   margin-bottom: 20px;
 }
-
-
-
 
 
 /*Contact sectiom*/
