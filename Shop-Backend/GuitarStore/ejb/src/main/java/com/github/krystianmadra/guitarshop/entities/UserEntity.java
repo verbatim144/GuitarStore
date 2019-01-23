@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ACCOUNT")
-public class UserEntity  {
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
@@ -14,6 +14,7 @@ public class UserEntity  {
     private String username;
     private String password;
     private String email;
+    private Role role;
     private String token;
     private LocalTime tokenExpirationDate;
 
@@ -33,9 +34,15 @@ public class UserEntity  {
     private List<OpinionEntity> opinions;
 
     public UserEntity() {
+        role = Role.USER;
         favourites = new FavouritesEntity(this);
         shoppingCart = new ShoppingCartEntity(this);
         address = new AddressEntity(this);
+    }
+
+    public UserEntity(Long id) {
+        this();
+        this.id = id;
     }
 
     public UserEntity(String username, String password, String email) {
@@ -88,6 +95,14 @@ public class UserEntity  {
 
     public void setTokenExpirationDate(LocalTime tokenExpirationDate) {
         this.tokenExpirationDate = tokenExpirationDate;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public String getPassword() {
