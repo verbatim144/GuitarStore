@@ -6,41 +6,26 @@ import java.math.BigDecimal;
 
 public class GuitarShortDTO {
 
-    private Long id;
     private String name;
     private double price;
     private String description;
     private String category;
-
-    public GuitarShortDTO(Long id, String name, double price, String description, String category){
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.category = category;
-        this.description = description;
-    }
+    private String imgUrl;
 
     public GuitarShortDTO(GuitarDTO guitarDTO){
-        this.id = guitarDTO.getId();
         this.name = guitarDTO.getName();
         this.price = guitarDTO.getPrice();
         this.description = guitarDTO.getDescription();
+        this.category = guitarDTO.getCategory();
+        this.imgUrl = guitarDTO.getImgUrl();
     }
 
     public GuitarShortDTO(GuitarEntity entity) {
-        id = entity.getId();
         name = entity.getName();
         price = entity.getPrice();
         description = entity.getDescription();
         category = entity.getCategory().getName();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+        imgUrl = entity.getImgUrl();
     }
 
     public String getName() {
@@ -53,6 +38,14 @@ public class GuitarShortDTO {
 
     public double getPrice() {
         return price;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public void setPrice(double price) {
@@ -78,7 +71,6 @@ public class GuitarShortDTO {
     @Override
     public String toString() {
         return "GuitarShortDTO{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
