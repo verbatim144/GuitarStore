@@ -10,17 +10,16 @@ import * as moment from 'moment';
 })
 export class HeaderComponent implements OnInit {
 
-  public identify = 0;
-
   guitars: Guitar[];
   guitarFind = new Guitar;
-  submitted: boolean = false;
+  role: string;
 
 
   constructor(private guitarService: GuitarsService) { }
 
   ngOnInit() {
   }
+
 
   findGuitar(name : String){
     return this.guitarService.getGuitar(name)
@@ -36,17 +35,14 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('expirationDate');
   }
 
-  public isLoggedIn() {
-    if(localStorage.getItem('userToken')==null){
+  public isLoggedOut() {
+    if (localStorage.getItem('userToken') == null && moment().isBefore(this.getExpiration()) == false) {
       return true;
-    }else{
-    return moment().isBefore(this.getExpiration());
+    } else {
+      return false
     }
   }
 
-  isLoggedOut() {
-    return !this.isLoggedIn();
-  }
 
   getExpiration() {
     const expiration = localStorage.getItem('expirationDate');
@@ -54,5 +50,15 @@ export class HeaderComponent implements OnInit {
     return moment(expiresAt);
   }
 
+  public isAdmin(){
+    if(!this.isLoggedOut()){
+      if (localStorage.getItem('role') == null || localStorage.getItem('role') == "USER"){
+        return false;
+      }else {
+        return true;
+      }
+    }
+    return false;
+  }
 
 }
