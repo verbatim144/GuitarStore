@@ -1,5 +1,5 @@
 .bgc{
-background-color: white;
+  background-image: url("../../assets/GuitarBackground.png");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -14,6 +14,8 @@ background-color: white;
   height: 110px;
   display: block;
   margin-left: auto;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
   margin-right: auto;
   border: none;
   border-radius: 5px;

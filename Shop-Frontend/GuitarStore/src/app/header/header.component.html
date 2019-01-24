@@ -2,38 +2,40 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
-  <img src="../../assets/logo.png" width="90px" height="50px" href="#" class="navbar-brand logo"  [routerLink]= "['landing']"/>
+  <img src="../../assets/logo.png" width="67px" height="40px" href="#" class="navbar-brand logo"
+       [routerLink]="['landing']"/>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="form-inline my-2 my-lg-0">
-          <input #findInput class="form-control-s mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button  (click)=findGuitar(findInput.value) class="btn-outline-successs my-2 my-sm-0 search_icon" type="submit" show [routerLink]="['search']"><i class="fas fa-search"><a
-            href="#"></a></i></button>
+
       <!--TEMPORARY BUTTON!!-->
 
-      <img [routerLink]= "['cart']" src="../../assets/cart.png" *ngIf=!isLoggedIn() style="width: 49px; height: 43px; margin-right: 10px">
-      <div class="fa fa-heart"  *ngIf=!isLoggedIn() style="color: #c93b2f; font-size: 30px; margin-right: 15px" [routerLink]="['favourite']"></div>
+      <img [routerLink]="['cart']" src="../../assets/cart.png" *ngIf=!isLoggedOut()
+           style="width: 49px; height: 43px; margin-right: 10px">
+      <div class="fa fa-heart" *ngIf=!isLoggedOut() style="color: #c93b2f; font-size: 30px; margin-right: 15px"
+           [routerLink]="['favourite']"></div>
 
       <!---------------------->
 
 
-      <ul class="navbar-nav ml-auto" >
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link-z" *ngIf=isLoggedIn() href="#" [routerLink]="['login']">Zaloguj się</a>
+          <a class="nav-link-z" *ngIf=isLoggedOut() href="#" [routerLink]="['login']">Zaloguj się</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-z" *ngIf=isLoggedIn() href="#" [routerLink]= "['register']">Zarejestruj się</a>
+          <a class="nav-link-z" *ngIf=isLoggedOut() href="#" [routerLink]="['register']">Zarejestruj się</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-z" [routerLink]= "['admin']" *ngIf=!isLoggedIn()>Panel Admina</a>
+          <a class="nav-link-z" [routerLink]="['admin']" *ngIf="isAdmin()">Panel Admina</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-z" [routerLink]= "['landing']" *ngIf=!isLoggedIn() (click)=logout()>Wyloguj się</a>
+          <a class="nav-link-z" [routerLink]="['landing']" *ngIf=!isLoggedOut() (click)=logout()>Wyloguj się</a>
         </li>
 
 
@@ -44,19 +46,20 @@
 
           </li>
           <li class="nav-item active">
-            <a class="nav-link cat" href="#" [routerLink]= "['electric']">Elektryczne<span class="sr-only">(current)</span></a>
+            <a class="nav-link cat" href="#" [routerLink]="['electric']">Elektryczne<span
+              class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cat" href="#" [routerLink]= "['acoustic']">>Akustyczne</a>
+            <a class="nav-link cat" href="#" [routerLink]="['acoustic']">Akustyczne</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cat" href="#" [routerLink]= "['classic']">Klasyczne</a>
+            <a class="nav-link cat" href="#" [routerLink]="['classic']">Klasyczne</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cat" href="#" [routerLink]= "['bass']">Basowe</a>
+            <a class="nav-link cat" href="#" [routerLink]="['bass']">Basowe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link cat" href="#" [routerLink]= "['contact']">Kontakt</a>
+            <a class="nav-link cat" href="#" [routerLink]="['contact']">Kontakt</a>
           </li>
         </div>
       </ul>
@@ -73,19 +76,20 @@
 
       <ul class="hr">
         <li class="nav-item active">
-          <a class="nav-link cat" href="#" [routerLink]= "['electric']">Elektryczne <span class="sr-only">(current)</span></a>
+          <a class="nav-link cat" href="#" [routerLink]="['electric']">Elektryczne <span
+            class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link cat" href="#" [routerLink]= "['acoustic']">Akustyczne</a>
+          <a class="nav-link cat" href="#" [routerLink]="['acoustic']">Akustyczne</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link cat" href="#" [routerLink]= "['classic']">Klasyczne</a>
+          <a class="nav-link cat" href="#" [routerLink]="['classic']">Klasyczne</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link cat" href="#" [routerLink]= "['bass']">Basowe</a>
+          <a class="nav-link cat" href="#" [routerLink]="['bass']">Basowe</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link cat" href="#" [routerLink]= "['contact']">Kontakt</a>
+          <a class="nav-link cat" href="#" [routerLink]="['contact']">Kontakt</a>
         </li>
       </ul>
     </div>
