@@ -12,11 +12,8 @@ export class HeaderComponent implements OnInit {
 
   guitars: Guitar[];
   guitarFind = new Guitar;
-  guitar = new Guitar();
-  submitted = false;
-  identify= 0;
-  sumGuitars = 0;
-  isLogIn : boolean;
+  role: string;
+
 
   constructor(private guitarService: GuitarsService) { }
 
@@ -25,13 +22,10 @@ export class HeaderComponent implements OnInit {
 
 
   findGuitar(name : String){
-    this.identify= this.identify + 1;
     return this.guitarService.getGuitar(name)
       .subscribe(
         guitar => {
-          console.log(this.guitars);
           this.guitarFind= guitar;
-
         }
       );
   }
@@ -41,21 +35,30 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('expirationDate');
   }
 
-  public isLoggedIn() {
-    if(localStorage.getItem('userToken')==null){
+  public isLoggedOut() {
+    if (localStorage.getItem('userToken') == null && moment().isBefore(this.getExpiration()) == false) {
       return true;
-    }else{
-    return moment().isBefore(this.getExpiration());
+    } else {
+      return false
     }
   }
 
-  isLoggedOut() {
-    return !this.isLoggedIn();
-  }
 
   getExpiration() {
     const expiration = localStorage.getItem('expirationDate');
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }
+
+  public isAdmin(){
+    if(!this.isLoggedOut()){
+      if (localStorage.getItem('role') == null || localStorage.getItem('role') == "USER"){
+        return false;
+      }else {
+        return true;
+      }
+    }
+    return false;
+  }
+
 }

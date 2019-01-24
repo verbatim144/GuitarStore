@@ -15,7 +15,6 @@
     </div>
     <div>
       <div class="card-op" style="width: 18rem;">
-
         <div class="card-body">
           <p class="pr-desc-us">Użytkowników</p>
           <div class="row">
@@ -50,7 +49,7 @@
   </div>
   <div class="d-flex justify-content-center">
     <div style="width: 50%">
-      <div class="circle-graph" style="margin-left: 13%; ">
+      <div class="circle-graph" style="margin-left: 13%;">
         <canvas class="canvas" baseChart
                 [data]="pieChartData"
                 [labels]="pieChartLabels"
@@ -63,7 +62,7 @@
       <div class="contact-section" style="margin-top: 50px">
         <div class="container">
           <div class="panel panel-default"
-               style="width: 420px; height: 470px; background-color: rgba(195,196,204,0.43)  ;display: block; margin-right: auto; margin-left: auto; border-radius: 7px">
+               style="width: 420px; height: 530px; background-color: rgba(195,196,204,0.43); display: block; margin-right: auto; margin-left: auto; border-radius: 7px">
             <div class="panel-heading" style="font-size: 20px; padding-bottom: 30px; height: 50px">DODAJ GITARĘ
             </div>
             <div class="panel-body">
@@ -72,11 +71,15 @@
                   style="width:380px; font-size: 18px; display: block; margin-left: auto; margin-right: auto; height: 35px"
                   class="form-control" id="inputGroupSelect012"
                   [(ngModel)]="guitar.category" name="category" #value="ngModel">
-                  <option value="Acoustic">Acoustic</option>
+                  <option value="Acoustic">Akustyczne</option>
                   <option value="Bass">Basowe</option>
                   <option value="Classic">Klasyczne</option>
                   <option value="Electric">Elektryczne</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <input  style="width:380px; font-size: 18px; border: none; font-family: 'Exo', sans-serif; color: #464646;" type="text" class="form-control" placeholder="Link do zdjęcia gitary"
+                        [(ngModel)]="guitar.imgUrl" name="amount" #value="ngModel">
               </div>
               <div class="form-group">
                 <input  style="width:380px; font-size: 18px; border: none; font-family: 'Exo', sans-serif; color: #464646;" type="number" class="form-control" placeholder="Ilość"
@@ -120,12 +123,17 @@
 
     <div *ngIf="identify===1" style="margin-left: auto; margin-right: auto">
       <div class="panel panel-default"
-           style="width: 450px; height: 440px; display: block; margin-right: auto; margin-left: auto; border-radius: 7px; margin-bottom: 200px">
-        <div class="panel-heading" style="font-size: 20px; padding-bottom: 30px; height: 50px">Informacja o gitarze
+           style="width: 450px; height: 500px; display: block; margin-right: auto; margin-left: auto;  background-color: rgba(195,196,204,0.43); border-radius: 7px; margin-bottom: 200px">
+        <div class="panel-heading" style="font-size: 20px; padding-bottom: 30px; height: 50px; background-color: rgba(195,196,204,0.43);">Informacja o gitarze
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <input style="width:400px; font-size: 18px;" type="text" class="form-control" id="telephone"
+            <input style="width:400px; font-size: 18px; border: none;" type="text" class="form-control" id="imgUrl"
+                   placeholder=" Link do zdjęcia gitary"
+                   [(ngModel)]="guitarFind.imgUrl" name="imgUrl" #value="ngModel">
+          </div>
+          <div class="form-group">
+            <input style="width:400px; font-size: 18px; border: none;" type="text" class="form-control" id="name"
                    placeholder=" Cena"
                    [(ngModel)]="guitarFind.name" name="price" #value="ngModel">
           </div>
@@ -136,7 +144,7 @@
               [(ngModel)]="guitarFind.description" name="description" #value="ngModel"></textarea>
           </div>
           <div class="form-group">
-            <input style="width:400px; font-size: 18px;" type="number" class="form-control" id="telephone"
+            <input style="width:400px; font-size: 18px; border: none;" type="number" class="form-control" id="telephone"
                    placeholder=" Cena"
                    [(ngModel)]="guitarFind.price" name="price" #value="ngModel">
           </div>

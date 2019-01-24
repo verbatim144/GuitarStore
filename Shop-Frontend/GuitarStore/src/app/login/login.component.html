@@ -37,13 +37,13 @@
             <input type="checkbox">Zapamiętaj mnie
           </div>
           <div class="form-group">
-            <input type="submit" (click)="sendUserLogin()" value="Login" class="btn float-right login_btn">
+            <input type="submit" (click)="sendUserLogin()"  value="Login" class="btn float-right login_btn">
           </div>
         </form>
       </div>
       <div class="card-footer">
-        <div class="d-flex justify-content-center links">
-         Nie masz konta?<a href="#">Zarejestruj się</a>
+        <div class="d-flex justify-content-center links"  [routerLink]= "['register']">
+         Nie masz konta?<a [routerLink]= "['register']">Zarejestruj się</a>
         </div>
       </div>
     </div>

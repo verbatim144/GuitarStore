@@ -13,7 +13,6 @@ const httpOptions = {
 })
 
 
-
 export class GuitarsService {
   private guitarUrl = "http://127.0.0.1:8080/war/guitar";
 
@@ -24,7 +23,6 @@ export class GuitarsService {
 
   getAllGuitars (): Observable<Guitar[]> {
 
-    httpOptions.headers.append('Authorization', 'Bearer ' + localStorage.getItem('userToken'));
     return this.http.get<Guitar[]>(this.guitarUrl);
   }
 

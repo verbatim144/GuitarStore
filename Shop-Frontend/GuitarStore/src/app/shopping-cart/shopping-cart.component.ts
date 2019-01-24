@@ -1,40 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
-import {Category} from '../categories/category';
-import {GuitarsService} from '../guitars/guitars.service';
-import {CategoryService} from '../categories/category.service';
-import {Location} from '@angular/common';
+import {ShoppingCartServiceService} from '../shopping-cart-service/shopping-cart-service.service';
+import {Cart} from '../shopping-cart-service/cart';
+import {OrderService} from '../order-service/order.service';
+import {AppGlobals} from '../app.global';
 
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
+  styleUrls: ['./shopping-cart.component.css'],
+  providers: [ AppGlobals]
 })
 export class ShoppingCartComponent implements OnInit {
 
   guitars: Guitar[];
-  guitar = new Guitar();
-  submitted = false;
+  cart: Cart[];
 
-
-  constructor(private guitarService: GuitarsService,
-              private categoryService: CategoryService,
-              private location: Location) { }
+  constructor(private shoppingService: ShoppingCartServiceService, private orderService: OrderService, private _global: AppGlobals) { }
 
   ngOnInit(): void {
-    this.getGuitars();
   }
 
-
   getGuitars() {
-    return this.guitarService.getAllGuitars()
+    return this.shoppingService.getAllProducts()
       .subscribe(
-        guitars => {
-          console.log(guitars);
-          this.guitars = guitars;
+        products => {
+          this.cart = products;
+          console.log(this.cart)
         }
       );
   }
+
 
 
 
