@@ -14,16 +14,15 @@ public class Token {
     private Long userId;
     private Role userRole;
 
-    public Token(Long userId, Role role) {
-        this(userId, role, new BigInteger(130, random).toString(32));
-        this.expirationDate = LocalTime.now().plusMinutes(10).plusHours(1);
+    public Token(Role role) {
+        this(role, new BigInteger(130, random).toString(32));
+        this.expirationDate = LocalTime.now().plusHours(1).plusMinutes(10);
     }
 
-    public Token(Long userId, Role role, String token) {
-        this.userId = userId;
+    public Token(Role role, String token) {
         this.token = token;
         this.userRole = role;
-        this.expirationDate = LocalTime.now().plusMinutes(10);
+        this.expirationDate = LocalTime.now().plusHours(1).plusMinutes(10);
     }
 
     public String getToken() {
