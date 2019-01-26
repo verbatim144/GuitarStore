@@ -24,7 +24,7 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.category = new GuitarCategoryEntity();
     }
 
-    public GuitarEntity(long id){
+    public GuitarEntity(Long id){
         super(id);
         this.category = new GuitarCategoryEntity();
     }
@@ -32,18 +32,10 @@ public class GuitarEntity extends AbstractBaseEntity {
     public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category, String imgUrl){
         this.name = name;
         this.price = price;
+        this.imgUrl = imgUrl;
         this.quantity = quantity;
         this.description = description;
         this.category = category;
-        this.imgUrl = imgUrl;
-    }
-
-    public long getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(long quantity) {
-        this.quantity = quantity;
     }
 
     public String getName() {
@@ -62,6 +54,14 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.price = price;
     }
 
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+        this.quantity = quantity;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -70,16 +70,16 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.description = description;
     }
 
-    public GuitarCategoryEntity getCategory() {
-        return category;
-    }
-
     public String getImgUrl() {
         return imgUrl;
     }
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public GuitarCategoryEntity getCategory() {
+        return category;
     }
 
     public void setCategory(GuitarCategoryEntity category) {
@@ -100,5 +100,19 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.description = guitarEntity.getDescription();
         this.quantity = guitarEntity.getQuantity();
         this.imgUrl = guitarEntity.getImgUrl();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null){
+            return false;
+        }
+        if (!(obj instanceof GuitarEntity)) {
+            return false;
+        }
+        return this.getName().equals(((GuitarEntity) obj).getName());
     }
 }
