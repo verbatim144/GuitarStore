@@ -97,20 +97,19 @@ export class AdminPanelComponent implements OnInit {
   private update(): void {
     this.guitarService.updateGuitar(this.guitarFind)
       .subscribe();
-    location.reload();
   }
 
   addGuitar() {
     this.guitar.id = 1;
     this.submitted = true;
     this.save();
+
   }
 
   private save(): void {
     console.log(this.guitar);
     this.guitarService.addGuitar(this.guitar)
       .subscribe();
-    location.reload();
   }
 
   getGuitars() {
@@ -129,7 +128,6 @@ export class AdminPanelComponent implements OnInit {
   private delete(): void {
     this.guitarService.deleteGuitar(this.guitarFind.id)
       .subscribe();
-    location.reload();
   }
 
 
