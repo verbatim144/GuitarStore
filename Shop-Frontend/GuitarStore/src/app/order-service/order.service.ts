@@ -14,7 +14,7 @@ const httpOptions = {
 
 export class OrderService {
 
-  private orderUrl = "http://127.0.0.1:8080/war/shoppingCart";
+  private orderUrl = 'http://127.0.0.1:8080/war/order';
 
   constructor (
     private http: HttpClient
