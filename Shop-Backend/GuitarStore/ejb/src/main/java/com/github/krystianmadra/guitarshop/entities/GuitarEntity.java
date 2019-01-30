@@ -17,14 +17,11 @@ public class GuitarEntity extends AbstractBaseEntity {
     @ManyToOne
     private GuitarCategoryEntity category;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "guitar")
-    private List<OpinionEntity> opinionEntities;
-
     public GuitarEntity(){
         this.category = new GuitarCategoryEntity();
     }
 
-    public GuitarEntity(long id){
+    public GuitarEntity(Long id){
         super(id);
         this.category = new GuitarCategoryEntity();
     }
@@ -32,18 +29,10 @@ public class GuitarEntity extends AbstractBaseEntity {
     public GuitarEntity(String name, double price, long quantity, String description, GuitarCategoryEntity category, String imgUrl){
         this.name = name;
         this.price = price;
+        this.imgUrl = imgUrl;
         this.quantity = quantity;
         this.description = description;
         this.category = category;
-        this.imgUrl = imgUrl;
-    }
-
-    public long getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(long quantity) {
-        this.quantity = quantity;
     }
 
     public String getName() {
@@ -62,16 +51,20 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.price = price;
     }
 
+    public long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(long quantity) {
+        this.quantity = quantity;
+    }
+
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public GuitarCategoryEntity getCategory() {
-        return category;
     }
 
     public String getImgUrl() {
@@ -82,16 +75,12 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.imgUrl = imgUrl;
     }
 
+    public GuitarCategoryEntity getCategory() {
+        return category;
+    }
+
     public void setCategory(GuitarCategoryEntity category) {
         this.category = category;
-    }
-
-    public List<OpinionEntity> getOpinionEntities() {
-        return opinionEntities;
-    }
-
-    public void setOpinionEntities(List<OpinionEntity> opinionEntities) {
-        this.opinionEntities = opinionEntities;
     }
 
     public void update(GuitarEntity guitarEntity) {
@@ -100,5 +89,19 @@ public class GuitarEntity extends AbstractBaseEntity {
         this.description = guitarEntity.getDescription();
         this.quantity = guitarEntity.getQuantity();
         this.imgUrl = guitarEntity.getImgUrl();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null){
+            return false;
+        }
+        if (!(obj instanceof GuitarEntity)) {
+            return false;
+        }
+        return this.getName().equals(((GuitarEntity) obj).getName());
     }
 }

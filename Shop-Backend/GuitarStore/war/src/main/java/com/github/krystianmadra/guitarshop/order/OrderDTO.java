@@ -1,39 +1,54 @@
 package com.github.krystianmadra.guitarshop.order;
 
+import com.github.krystianmadra.guitarshop.RandomOrderCode;
 import com.github.krystianmadra.guitarshop.entities.OrderEntity;
 import com.github.krystianmadra.guitarshop.entities.OrderState;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTO;
 
 import java.time.LocalTime;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class OrderDTO {
 
-    private Long id;
-    private LocalTime orderDate;
     private Long user;
     private OrderState state;
-    private List<GuitarDTO> guitars;
-    //private List<OrderDetailsDTO> ordersDetails;
+    private LocalTime orderDate;
+    private double totalPrice;
+    private String orderCode;
+    private Set<GuitarDTO> guitars;
 
     public OrderDTO() {
         state = OrderState.PROCESSING;
+        orderCode = RandomOrderCode.randomString(5);
+        orderDate = LocalTime.now();
     }
 
     public OrderDTO(OrderEntity orderEntity) {
-        id = orderEntity.getId();
-        orderDate = orderEntity.getOrderDate();
         state = orderEntity.getState();
         user = orderEntity.getUser().getId();
+        orderDate = orderEntity.getOrderDate();
+        orderCode = orderEntity.getOrderCode();
+        totalPrice = orderEntity.getTotalPrice();
+        guitars = orderEntity.getGuitars().stream().map(GuitarDTO::new).collect(Collectors.toSet());
     }
 
-    public Long getId() {
-        return id;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
+
+    public String getOrderCode() {
+        return orderCode;
+    }
+
+    public void setOrderCode(String orderCode) {
+        this.orderCode = orderCode;
+    }
+
 
     public LocalTime getOrderDate() {
         return orderDate;
@@ -51,14 +66,6 @@ public class OrderDTO {
         this.user = user;
     }
 
-    public List<GuitarDTO> getGuitars() {
-        return guitars;
-    }
-
-    public void setGuitars(List<GuitarDTO> guitars) {
-        this.guitars = guitars;
-    }
-
     public OrderState getState() {
         return state;
     }
@@ -67,13 +74,11 @@ public class OrderDTO {
         this.state = state;
     }
 
-    /*
-    public List<OrderDetailsDTO> getOrdersDetails() {
-        return ordersDetails;
+    public Set<GuitarDTO> getGuitars() {
+        return guitars;
     }
 
-    public void setOrdersDetails(List<OrderDetailsDTO> ordersDetails) {
-        this.ordersDetails = ordersDetails;
+    public void setGuitars(Set<GuitarDTO> guitars) {
+        this.guitars = guitars;
     }
-    */
 }

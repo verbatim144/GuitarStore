@@ -16,7 +16,7 @@ export class ShoppingCartComponent implements OnInit {
   guitars: Guitar[];
   cart: Cart[];
 
-  constructor(private shoppingService: ShoppingCartServiceService, private orderService: OrderService, private _global: AppGlobals) { }
+  constructor(private shoppingService: ShoppingCartServiceService, private orderService: OrderService) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,8 @@ export class ShoppingCartComponent implements OnInit {
       .subscribe(
         products => {
           this.cart = products;
-          console.log(this.cart)
+          console.log(this.cart);
+
         }
       );
   }
