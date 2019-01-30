@@ -7,7 +7,6 @@ import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.criteria.Order;
 import java.util.Set;
 
 @Singleton
@@ -136,31 +135,8 @@ public class InitializeDatabaseBean {
         OrderEntity zamowienieBasi = new OrderEntity(baska);
         em.persist(zamowienieBasi);
 
-        OrderDetails order1 = new OrderDetails(zamowienieBasi, 2, bass1);
-        OrderDetails order2 = new OrderDetails(zamowienieBasi, 2, acoustic1);
-        OrderDetails order3 = new OrderDetails(zamowienieBasi, 2, electric3);
-        em.persist(order1);
-        em.persist(order2);
-        em.persist(order3);
-
         OrderEntity zamowienieAni = new OrderEntity(ania);
         em.persist(zamowienieAni);
-
-        OrderDetails order4 = new OrderDetails(zamowienieAni, 1, bass4);
-        OrderDetails order5 = new OrderDetails(zamowienieAni, 2, acoustic2);
-        OrderDetails order6 = new OrderDetails(zamowienieAni, 1, electric1);
-        em.persist(order4);
-        em.persist(order5);
-        em.persist(order6);
-
-        ShoppingCartEntity scA = ania.getShoppingCart();
-        Set<GuitarEntity> samples = scA.getProducts();
-
-        samples.add(bass1);
-        samples.add(electric1);
-        scA.setProducts(samples);
-
-        em.merge(scA);
 
     }
 }
