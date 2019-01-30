@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
 import * as moment from 'moment';
+import {OrderService} from '../order-service/order.service';
+import {Orders} from '../order-service/order';
 
 
 @Component({
@@ -12,8 +14,9 @@ import * as moment from 'moment';
 export class AcousticComponent implements OnInit {
 
   guitars: Guitar[];
+  order = new Orders();
 
-  constructor(private guitarService: GuitarsService) { }
+  constructor(private guitarService: GuitarsService, private orderService: OrderService) { }
 
   ngOnInit() {
     this.getGuitars();
@@ -29,9 +32,9 @@ export class AcousticComponent implements OnInit {
   }
 
   public isLoggedIn() {
-    if(localStorage.getItem('userToken')==null){
+    if (localStorage.getItem('userToken') === null) {
       return true;
-    }else{
+    } else {
       return moment().isBefore(this.getExpiration());
     }
   }
@@ -41,4 +44,19 @@ export class AcousticComponent implements OnInit {
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }
+
+  public addOrder() {
+    this.add();
+  }
+
+  private add(): void {
+    this.orderService.addOrder(this.order)
+      .subscribe();
+  }
+
+  orderClick(category: string,) {
+    this.order.guitars = this.guitars;
+  }
+
+
 }
