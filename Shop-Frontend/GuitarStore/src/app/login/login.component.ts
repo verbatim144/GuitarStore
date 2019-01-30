@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../user/user';
 import {LoginService} from '../login-service/login.service';
-import {HttpErrorResponse} from '@angular/common/http';
 import {Router, RouterModule} from '@angular/router';
 
 @Component({
@@ -19,17 +18,18 @@ export class LoginComponent implements OnInit {
   }
 
 
-  sendUserLogin(){
+  sendUserLogin() {
     this.sendUser();
   }
 
-  private sendUser(){
+  private sendUser() {
      return this.loginService.loginUser(this.userLogin).subscribe(
-       (data : any)=>{
+       (data: any) => {
       localStorage.setItem('userToken', data.token);
-      localStorage.setItem('role', data.userRole)
-      this.router.navigate(['/landing'])
-    })
+      localStorage.setItem('role', data.userRole);
+      localStorage.setItem('order', data.username);
+      this.router.navigate(['/landing']);
+    });
   }
 
 
