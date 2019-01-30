@@ -24,19 +24,12 @@ public class UserEntity {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private FavouritesEntity favourites;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
-    private ShoppingCartEntity shoppingCart;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<OrderEntity> orders;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<OpinionEntity> opinions;
 
     public UserEntity() {
         role = Role.USER;
         favourites = new FavouritesEntity(this);
-        shoppingCart = new ShoppingCartEntity(this);
         address = new AddressEntity(this);
     }
 
@@ -57,11 +50,9 @@ public class UserEntity {
         this.id = id;
     }
 
-    public UserEntity(FavouritesEntity favourites,List<OpinionEntity> opinions, AddressEntity address, ShoppingCartEntity shoppingCart, String username, String password, String email, String token) {
+    public UserEntity(FavouritesEntity favourites, AddressEntity address, String username, String password, String email) {
         this(username, password, email);
         this.favourites = favourites;
-        this.shoppingCart = shoppingCart;
-        this.opinions = opinions;
         this.address = address;
     }
 
@@ -79,14 +70,6 @@ public class UserEntity {
 
     public void setFavourites(FavouritesEntity favourites) {
         this.favourites = favourites;
-    }
-
-    public ShoppingCartEntity getShoppingCart() {
-        return shoppingCart;
-    }
-
-    public void setShoppingCart(ShoppingCartEntity shoppingCart) {
-        this.shoppingCart = shoppingCart;
     }
 
     public LocalTime getTokenExpirationDate() {
@@ -139,14 +122,6 @@ public class UserEntity {
 
     public String getUsername() {
         return username;
-    }
-
-    public List<OpinionEntity> getOpinions() {
-        return opinions;
-    }
-
-    public void setOpinions(List<OpinionEntity> opinions) {
-        this.opinions = opinions;
     }
 
     public void setPassword(String password) {

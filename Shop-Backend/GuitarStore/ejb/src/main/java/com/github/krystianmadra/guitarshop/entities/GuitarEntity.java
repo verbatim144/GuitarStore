@@ -17,9 +17,6 @@ public class GuitarEntity extends AbstractBaseEntity {
     @ManyToOne
     private GuitarCategoryEntity category;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "guitar")
-    private List<OpinionEntity> opinionEntities;
-
     public GuitarEntity(){
         this.category = new GuitarCategoryEntity();
     }
@@ -84,14 +81,6 @@ public class GuitarEntity extends AbstractBaseEntity {
 
     public void setCategory(GuitarCategoryEntity category) {
         this.category = category;
-    }
-
-    public List<OpinionEntity> getOpinionEntities() {
-        return opinionEntities;
-    }
-
-    public void setOpinionEntities(List<OpinionEntity> opinionEntities) {
-        this.opinionEntities = opinionEntities;
     }
 
     public void update(GuitarEntity guitarEntity) {
