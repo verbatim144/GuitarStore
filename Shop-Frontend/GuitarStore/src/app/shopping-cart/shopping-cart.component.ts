@@ -4,6 +4,7 @@ import {ShoppingCartServiceService} from '../shopping-cart-service/shopping-cart
 import {Cart} from '../shopping-cart-service/cart';
 import {OrderService} from '../order-service/order.service';
 import {AppGlobals} from '../app.global';
+import {Orders} from '../order-service/order';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -15,24 +16,41 @@ export class ShoppingCartComponent implements OnInit {
 
   guitars: Guitar[];
   cart: Cart[];
+  orders: Orders;
+  totalsum = 0;
 
   constructor(private shoppingService: ShoppingCartServiceService, private orderService: OrderService) { }
 
   ngOnInit(): void {
+    this.orders = this.orderService.getOrder();
+    this.totalSumOrder();
   }
 
-  getGuitars() {
-    return this.shoppingService.getAllProducts()
-      .subscribe(
-        products => {
-          this.cart = products;
-          console.log(this.cart);
-
-        }
-      );
+  onItemDeleted(index) {
+    this.orders.guitars.splice(index, 1);
   }
 
+  onAllDeleted() {
+    this.orders.guitars = [];
+    this.totalsum = 0;
+  }
 
+  addOrder() {
+    this.save();
+    this.onAllDeleted();
+  }
 
+  private save(): void {
+    console.log(this.orders);
+    this.orderService.setTotalPrice(this.totalsum);
+    this.orderService.addOrder(this.orders)
+      .subscribe();
+  }
+
+  totalSumOrder() {
+    for (let i = 0; i < this.orders.guitars.length; i++) {
+      this.totalsum = this.totalsum + this.orders.guitars[i].price;
+    }
+  }
 
 }

@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import {Category} from '../categories/category';
 import {CategoryService} from '../categories/category.service';
 import * as moment from 'moment';
+import {OrderService} from '../order-service/order.service';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class ElectricComponent implements OnInit {
 
   constructor(private guitarService: GuitarsService,
               private categoryService: CategoryService,
-              private location: Location) { }
+              private location: Location,
+              private orderService: OrderService) { }
 
   ngOnInit(): void {
    this.getGuitars();
@@ -57,8 +59,9 @@ export class ElectricComponent implements OnInit {
       .subscribe(
         guitar => {
           this.guitarFind = guitar;
-          console.log(this.guitarFind);
-          localStorage.setItem('order', JSON.stringify(this.guitarFind));
+          this.orderService.addGuitar(this.guitarFind);
+          /*localStorage.setItem('order', JSON.stringify(this.guitarFind));*/
+
         }
       );
   }

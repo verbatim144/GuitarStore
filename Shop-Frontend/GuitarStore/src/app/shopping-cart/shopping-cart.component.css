@@ -87,7 +87,11 @@
   bottom: 0
 }
 
-.card-body:hover{
- background-color: rgba(210, 204, 208, 0.4);
+
+.container-cards{
+  margin-top: 20px;
 }
 
+.container-cards:hover{
+  background-color: rgba(210, 204, 208, 0.4);
+}
