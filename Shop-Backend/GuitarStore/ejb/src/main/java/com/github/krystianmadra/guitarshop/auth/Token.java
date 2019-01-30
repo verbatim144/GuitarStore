@@ -11,22 +11,27 @@ public class Token {
     private final static SecureRandom random = new SecureRandom();
     private String token;
     private LocalTime expirationDate;
+    private String username;
     private Long userId;
     private Role userRole;
 
-    public Token(Role role) {
-        this(role, new BigInteger(130, random).toString(32));
-        this.expirationDate = LocalTime.now().plusHours(1).plusMinutes(10);
-    }
-
-    public Token(Role role, String token) {
-        this.token = token;
+    public Token(Role role, String username) {
         this.userRole = role;
+        this.username = username;
+        this.token = new BigInteger(130, random).toString(32);
         this.expirationDate = LocalTime.now().plusHours(1).plusMinutes(10);
     }
 
     public String getToken() {
         return token;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public LocalTime getExpirationDate() {
