@@ -2,6 +2,7 @@ package com.github.krystianmadra.guitarshop.rest;
 
 import com.github.krystianmadra.guitarshop.GuitarDao;
 import com.github.krystianmadra.guitarshop.entities.GuitarEntity;
+import com.github.krystianmadra.guitarshop.entities.Role;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTO;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTOToEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarShortDTO;
@@ -16,14 +17,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Path("/guitar")
-@RequestScoped // przez scope provided - do DI
+@RequestScoped
 public class GuitarRestful {
 
     @EJB
     private GuitarDao guitarDao;
 
     @GET
-    @Secured
+    @Secured({Role.ADMIN})
     @Path("/{id}")
     @Produces("application/json; charset=UTF-8")
     public Response getById(@PathParam("id") long id) {
@@ -47,14 +48,22 @@ public class GuitarRestful {
     }
 
     @GET
+    @Path("/short")
     @Produces("application/json; charset=UTF-8")
-    public Response getAll() {
+    public Response getAllShort() {
         List<GuitarShortDTO> ret = guitarDao.findAll().stream().map(GuitarShortDTO::new).collect(Collectors.toList());
         return Response.status(200).entity(ret).build();
     }
 
+    @GET
+    @Produces("application/json; charset=UTF-8")
+    public Response getAll() {
+        List<GuitarDTO> ret = guitarDao.findAll().stream().map(GuitarDTO::new).collect(Collectors.toList());
+        return Response.status(200).entity(ret).build();
+    }
+
     @POST
-    @Secured
+    @Secured({Role.ADMIN})
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
     public Response addGuitar(GuitarDTO guitar) {
@@ -67,7 +76,7 @@ public class GuitarRestful {
     }
 
     @DELETE
-    @Secured
+    @Secured({Role.ADMIN})
     @Path("{id}")
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
@@ -77,7 +86,7 @@ public class GuitarRestful {
     }
 
     @PUT
-    @Secured
+    @Secured({Role.ADMIN})
     @Consumes("application/json; charset=UTF-8")
     @Produces("application/json; charset=UTF-8")
     public Response editGuitar(GuitarDTO guitar) {
