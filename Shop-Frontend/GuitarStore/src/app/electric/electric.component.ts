@@ -16,7 +16,8 @@ export class ElectricComponent implements OnInit {
 
   guitars: Guitar[];
   guitar = new Guitar();
-  category= new Category();
+  category = new Category();
+  guitarFind = new Guitar;
 
 
   constructor(private guitarService: GuitarsService,
@@ -37,7 +38,7 @@ export class ElectricComponent implements OnInit {
   }
 
   public isLoggedIn() {
-    if(localStorage.getItem('userToken')==null){
+    if(localStorage.getItem('userToken') === null) {
       return true;
     }else{
       return moment().isBefore(this.getExpiration());
@@ -49,6 +50,22 @@ export class ElectricComponent implements OnInit {
     const expiration = localStorage.getItem('expirationDate');
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
+  }
+
+  getGuitarById(id: number) {
+    return this.guitarService.getGuitarById(id)
+      .subscribe(
+        guitar => {
+          this.guitarFind = guitar;
+          console.log(this.guitarFind);
+          localStorage.setItem('order', JSON.stringify(this.guitarFind));
+        }
+      );
+  }
+
+  orderClick(id: number) {
+   this.getGuitarById(id);
+
   }
 
 

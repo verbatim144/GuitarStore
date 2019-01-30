@@ -28,13 +28,6 @@ export class LoginService {
   }
 
 
-  private setSession(authResult) {
-    const expiresAt = moment().add(authResult.expirationDate, 'second');
-
-    localStorage.setItem('token', authResult.token);
-    localStorage.setItem('expirationDate', JSON.stringify(expiresAt.valueOf()) );
-  }
-
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('expirationDate');

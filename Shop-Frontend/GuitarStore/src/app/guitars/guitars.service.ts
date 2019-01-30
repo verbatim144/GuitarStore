@@ -14,7 +14,7 @@ const httpOptions = {
 
 
 export class GuitarsService {
-  private guitarUrl = "http://127.0.0.1:8080/war/guitar";
+  private guitarUrl = 'http://127.0.0.1:8080/war/guitar';
 
   constructor (
     private http: HttpClient
@@ -27,10 +27,15 @@ export class GuitarsService {
   }
 
 getGuitar(name: String): Observable<Guitar> {
-  const url = `${this.guitarUrl+'/name'}/${name}`;
+  const url = `${this.guitarUrl + '/name'}/${name}`;
   console.log(url);
 return this.http.get<Guitar>(url);
 }
+
+  getGuitarById(id: number): Observable<Guitar> {
+    const url = `${this.guitarUrl}/${id}`;
+    return this.http.get<Guitar>(url);
+  }
 
 addGuitar(guitar: Guitar): Observable<Guitar> {
   return this.http.post<Guitar>(this.guitarUrl, guitar, httpOptions);
