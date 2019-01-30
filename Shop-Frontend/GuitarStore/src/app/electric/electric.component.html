@@ -29,7 +29,7 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-danger liked"  data-toggle="modal" data-target="#ModalFavourite"><i class="fas fa-heart"></i></button>
+            <button type="button" class="btn btn-danger liked"  data-toggle="modal" data-target="#ModalFavourite"  (click)=" favoriteClick(guit.id)"><i class="fas fa-heart"></i></button>
             <div *ngIf=isLoggedIn() class="modal fade" id="ModalFavourite" tabindex="-1" role="dialog" aria-labelledby="ModalFavouriteLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
