@@ -6,6 +6,8 @@ import {Category} from '../categories/category';
 import {CategoryService} from '../categories/category.service';
 import * as moment from 'moment';
 import {OrderService} from '../order-service/order.service';
+import {FavoriteService} from '../favorite-service/favorite-service.service';
+import {StatsService} from '../stats/stats.service';
 
 
 @Component({
@@ -19,15 +21,18 @@ export class ElectricComponent implements OnInit {
   guitar = new Guitar();
   category = new Category();
   guitarFind = new Guitar;
+  guitarFindFavourite = new Guitar;
 
 
   constructor(private guitarService: GuitarsService,
               private categoryService: CategoryService,
               private location: Location,
-              private orderService: OrderService) { }
+              private orderService: OrderService,
+              private favouriteService: FavoriteService,) { }
 
   ngOnInit(): void {
    this.getGuitars();
+
   }
 
   getGuitars() {
@@ -60,16 +65,31 @@ export class ElectricComponent implements OnInit {
         guitar => {
           this.guitarFind = guitar;
           this.orderService.addGuitar(this.guitarFind);
+        //  this.favouriteService.addGuitarFavourite(this.guitarFind);
           /*localStorage.setItem('order', JSON.stringify(this.guitarFind));*/
-
         }
       );
   }
 
-  orderClick(id: number) {
-   this.getGuitarById(id);
-
+  getGuitarByIdFavourite(id: number) {
+    return this.guitarService.getGuitarById(id)
+      .subscribe(
+        guitarr => {
+          this.guitarFindFavourite = guitarr;
+            this.favouriteService.addGuitarFavourite(this.guitarFindFavourite);
+          /*localStorage.setItem('order', JSON.stringify(this.guitarFind));*/
+        }
+      );
   }
+
+  favoriteClick(id: number) {
+    this.getGuitarByIdFavourite(id);
+  }
+
+  orderClick(id: number) {
+    this.getGuitarById(id);
+  }
+
 
 
 }

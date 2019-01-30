@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Orders} from './order';
 import {Guitar} from '../guitars/guitar';
+import {Favourites} from '../favorite-service/favourites';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -31,19 +32,20 @@ export class OrderService {
     this.order = new Orders();
     this.order.guitars = [];
     this.order.user = username;
+
   }
 
   addGuitar(guitar: Guitar) {
     this.order.guitars.push(guitar);
   }
 
+
   setTotalPrice(price: number) {
     this.order.totalPrice = price;
   }
 
   getOrder() {
-    console.log(this.order);
     return this.order;
-
   }
+
 }

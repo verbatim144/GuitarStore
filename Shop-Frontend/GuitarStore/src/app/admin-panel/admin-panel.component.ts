@@ -3,6 +3,7 @@ import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
 import {Chart} from  'chart.js'
 import {Router} from '@angular/router';
+import {StatsService} from '../stats/stats.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -24,12 +25,14 @@ export class AdminPanelComponent implements OnInit {
   bassGuitarSum = 0;
 
   constructor(private guitarService: GuitarsService,
-              private router : Router) { }
+              private router : Router,
+              private statsService: StatsService) { }
 
   ngOnInit() {
     this.getGuitars();
     this.sumGuitarsQuantity()
-    this.sumOfGuitarCategory()
+    this.sumOfGuitarCategory();
+    console.log(this.statsService.getGuitar());
 
   }
 

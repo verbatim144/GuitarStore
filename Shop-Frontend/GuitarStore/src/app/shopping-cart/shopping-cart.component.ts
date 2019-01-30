@@ -27,6 +27,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   onItemDeleted(index) {
+    this.totalsum = this.totalsum - this.orders.guitars[index].price;
     this.orders.guitars.splice(index, 1);
   }
 
@@ -41,7 +42,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   private save(): void {
-    console.log(this.orders);
     this.orderService.setTotalPrice(this.totalsum);
     this.orderService.addOrder(this.orders)
       .subscribe();

@@ -3,6 +3,7 @@ import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
 import * as moment from 'moment';
 import {OrderService} from '../order-service/order.service';
+import {FavoriteService} from '../favorite-service/favorite-service.service';
 
 @Component({
   selector: 'app-classic',
@@ -13,8 +14,9 @@ export class ClassicComponent implements OnInit {
 
   guitars: Guitar[];
   guitarFind = new Guitar;
+  guitarFindFavourite = new Guitar;
 
-  constructor(private guitarService: GuitarsService, private orderService: OrderService) { }
+  constructor(private guitarService: GuitarsService, private orderService: OrderService,  private favouriteService: FavoriteService) { }
 
   ngOnInit() {
     this.getGuitars();
@@ -59,5 +61,20 @@ export class ClassicComponent implements OnInit {
   orderClick(id: number) {
     this.getGuitarById(id);
 
+  }
+
+  getGuitarByIdFavourite(id: number) {
+    return this.guitarService.getGuitarById(id)
+      .subscribe(
+        guitarr => {
+          this.guitarFindFavourite = guitarr;
+          this.favouriteService.addGuitarFavourite(this.guitarFindFavourite);
+          /*localStorage.setItem('order', JSON.stringify(this.guitarFind));*/
+        }
+      );
+  }
+
+  favoriteClick(id: number) {
+    this.getGuitarByIdFavourite(id);
   }
 }
