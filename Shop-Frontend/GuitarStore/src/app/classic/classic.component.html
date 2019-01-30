@@ -11,7 +11,7 @@
           <h2 #descInput style="font-family: 'Amiri', serif;color: #464646; font-size: 16px">{{guit.description}}</h2>
           <p #priceInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.price}},-zł</p>
 
-          <div><button type="button" class="btn btn-success sucesss"  data-toggle="modal" data-target="#ModalCart">Dodaj do koszyka</button>
+          <div><button type="button" class="btn btn-success sucesss"  data-toggle="modal" data-target="#ModalCart" (click)=" orderClick(guit.id)">Dodaj do koszyka</button>
             <div *ngIf=isLoggedIn() class="modal fade" id="ModalCart" tabindex="-1" role="dialog" aria-labelledby="ModalCart" aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
