@@ -1,14 +1,12 @@
 package com.github.krystianmadra.guitarshop;
 
-import com.github.krystianmadra.guitarshop.entities.Role;
-import com.github.krystianmadra.guitarshop.entities.ShoppingCartEntity;
+import com.github.krystianmadra.guitarshop.auth.Token;
 import com.github.krystianmadra.guitarshop.entities.UserEntity;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,25 +40,13 @@ public class UserDao {
         return Optional.of(ret);
     }
 
-    public UserEntity updateToken(Long id, String token, LocalTime tokenExpirationDate) {
-        UserEntity dbUser = getUserById(id).get();
-        dbUser.updateToken(token, tokenExpirationDate);
-        return em.merge(dbUser);
+    public UserEntity updateToken(UserEntity user, Token token) {
+        user.updateToken(token.getToken(), token.getExpirationDate());
+        return em.merge(user);
     }
 
     public void saveUser(UserEntity user) {
         em.persist(user);
     }
 
-    public Optional<ShoppingCartEntity> getShoppingCartByUserId(Long id) {
-        TypedQuery<ShoppingCartEntity> query = em.createQuery("select s from ShoppingCartEntity s where s.user.id = :id", ShoppingCartEntity.class);
-        query.setParameter("id", id);
-
-        ShoppingCartEntity ret = query.getSingleResult();
-        return Optional.of(ret);
-    }
-
-    public void UpdateProductsList(ShoppingCartEntity shoppingCartEntity) {
-        em.merge(shoppingCartEntity);
-    }
 }

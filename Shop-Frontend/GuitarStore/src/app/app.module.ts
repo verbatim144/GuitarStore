@@ -24,7 +24,6 @@ import { SearchComponent } from './search/search.component';
 import {AuthInterceptor} from './interceptors/auth.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

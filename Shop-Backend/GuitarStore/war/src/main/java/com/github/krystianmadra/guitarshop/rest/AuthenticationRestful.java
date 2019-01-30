@@ -25,11 +25,9 @@ public class AuthenticationRestful {
     public Response authenticateUser(UserEntity user){
 
         try{
-            authenticate(user.getUsername(), user.getPassword());
-
             UserEntity dbUser = userDao.getUserWithCredentials(user.getUsername(),user.getPassword()).get();
 
-            Token token = issueToken(dbUser.getId(), dbUser.getRole());
+            Token token = issueTokenTo(dbUser);
             loginManager.saveNewToken(token);
 
             return Response.ok(token).build();
@@ -38,16 +36,9 @@ public class AuthenticationRestful {
         }
     }
 
-    private void authenticate(String username, String password) throws Exception{
-        UserDTO ret = new UserDTO(userDao.getUserWithCredentials(username,password).get());
-        if(ret.getId() == null){
-            throw new IllegalArgumentException("There is no user with these credentials");
-        }
-    }
-
-    private Token issueToken(Long userId, Role userRole) {
-        Token token = new Token(userId, userRole);
-        userDao.updateToken(userId, token.getToken(), token.getExpirationDate());
+    private Token issueTokenTo(UserEntity user) {
+        Token token = new Token(user.getRole());
+        userDao.updateToken(user, token);
 
         return token;
     }
