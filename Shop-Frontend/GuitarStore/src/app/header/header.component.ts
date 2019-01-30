@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Guitar} from '../guitars/guitar';
 import {GuitarsService} from '../guitars/guitars.service';
 import * as moment from 'moment';
+import {Orders} from '../order-service/order';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ export class HeaderComponent implements OnInit {
   guitars: Guitar[];
   guitarFind = new Guitar;
   role: string;
+  order = new Orders();
 
 
   constructor(private guitarService: GuitarsService) { }
@@ -33,6 +35,9 @@ export class HeaderComponent implements OnInit {
   logout() {
     localStorage.removeItem('userToken');
     localStorage.removeItem('expirationDate');
+    this.order.totalPrice = null;
+    this.order.user = null;
+    this.order.guitars = null;
   }
 
   public isLoggedOut() {
