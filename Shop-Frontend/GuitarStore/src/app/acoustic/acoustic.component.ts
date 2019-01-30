@@ -15,6 +15,7 @@ export class AcousticComponent implements OnInit {
 
   guitars: Guitar[];
   order = new Orders();
+  guitarFind = new Guitar;
 
   constructor(private guitarService: GuitarsService, private orderService: OrderService) { }
 
@@ -54,8 +55,21 @@ export class AcousticComponent implements OnInit {
       .subscribe();
   }
 
-  orderClick(category: string,) {
-    this.order.guitars = this.guitars;
+
+  getGuitarById(id: number) {
+    return this.guitarService.getGuitarById(id)
+      .subscribe(
+        guitar => {
+          this.guitarFind = guitar;
+          this.orderService.addGuitar(this.guitarFind);
+          /*localStorage.setItem('order', JSON.stringify(this.guitarFind));*/
+
+        }
+      );
+  }
+
+  orderClick(id: number) {
+    this.getGuitarById(id);
   }
 
 
