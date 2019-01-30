@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class OrderDTO {
 
-    private Long user;
+    private String user;
     private OrderState state;
     private LocalTime orderDate;
     private double totalPrice;
@@ -26,7 +26,7 @@ public class OrderDTO {
 
     public OrderDTO(OrderEntity orderEntity) {
         state = orderEntity.getState();
-        user = orderEntity.getUser().getId();
+        user = orderEntity.getUser().getUsername();
         orderDate = orderEntity.getOrderDate();
         orderCode = orderEntity.getOrderCode();
         totalPrice = orderEntity.getTotalPrice();
@@ -58,11 +58,11 @@ public class OrderDTO {
         this.orderDate = orderDate;
     }
 
-    public Long getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(Long user) {
+    public void setUser(String user) {
         this.user = user;
     }
 

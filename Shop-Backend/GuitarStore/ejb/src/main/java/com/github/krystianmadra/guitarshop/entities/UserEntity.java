@@ -38,6 +38,11 @@ public class UserEntity {
         this.id = id;
     }
 
+    public UserEntity(String username) {
+        this();
+        this.username = username;
+    }
+
     public UserEntity(String username, String password, String email) {
         this();
         this.username = username;

@@ -8,6 +8,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -17,15 +18,26 @@ public class OrderDao {
     @EJB
     private UserDao userDao;
 
+    @EJB
+    private GuitarDao guitarDao;
+
+
     @PersistenceContext(unitName = "primary")
     protected EntityManager em;
 
     public Optional<OrderEntity> add(OrderEntity order) {
-        UserEntity user = userDao.getUserById(order.getUser().getId()).get();
-        Set<GuitarEntity> guitarEntities = order.getGuitars();
+        UserEntity user = userDao.getUserByName(order.getUser().getUsername()).get();
         order.setUser(user);
 
-        em.persist(guitarEntities);
+        Set<GuitarEntity> guitars = new HashSet<>();
+
+        for(GuitarEntity guitar : order.getGuitars()){
+            Optional<GuitarEntity> ret = guitarDao.findById(guitar.getId());
+            guitars.add(ret.get());
+        }
+
+        order.setGuitars(guitars);
+
         em.persist(order);
         return Optional.of(order);
     }

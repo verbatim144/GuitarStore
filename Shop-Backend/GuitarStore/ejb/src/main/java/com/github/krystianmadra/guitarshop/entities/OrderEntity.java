@@ -28,20 +28,18 @@ public class OrderEntity{
     private Set<GuitarEntity> guitars;
 
     public OrderEntity() {
+        this.orderDate = LocalTime.now();
+        this.state = OrderState.PENDING_PAYMENT;
+        this.orderCode = RandomOrderCode.randomString(5);
     }
 
     public OrderEntity(UserEntity user) {
-        this.orderDate = LocalTime.now();
-        this.state = OrderState.PENDING_PAYMENT;
+        this();
         this.user = user;
-        this.orderCode = RandomOrderCode.randomString(5);
     }
 
     public OrderEntity(UserEntity user, Set<GuitarEntity> guitars) {
-        this.user = user;
-        this.orderDate = LocalTime.now();
-        this.state = OrderState.PENDING_PAYMENT;
-        this.orderCode = RandomOrderCode.randomString(5);
+        this(user);
         this.guitars = guitars;
         this.totalPrice = initTotalPrice(guitars);
     }
@@ -49,7 +47,7 @@ public class OrderEntity{
     private double initTotalPrice(Set<GuitarEntity> guitars){
         double totalPrice = 0;
         for (GuitarEntity guitar : guitars){
-            totalPrice += guitar.getPrice() * guitar.getQuantity(); //* discount;
+            totalPrice += guitar.getPrice(); //* guitar.getQuantity(); * discount;
         }
         return totalPrice;
     }

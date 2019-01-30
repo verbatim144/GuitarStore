@@ -40,6 +40,14 @@ public class UserDao {
         return Optional.of(ret);
     }
 
+    public Optional<UserEntity> getUserByName(String name){
+        TypedQuery<UserEntity> query = em.createQuery("select u from UserEntity u where u.username = :name", UserEntity.class);
+        query.setParameter("name", name);
+        UserEntity ret = query.getSingleResult();
+
+        return Optional.of(ret);
+    }
+
     public UserEntity updateToken(UserEntity user, Token token) {
         user.updateToken(token.getToken(), token.getExpirationDate());
         return em.merge(user);

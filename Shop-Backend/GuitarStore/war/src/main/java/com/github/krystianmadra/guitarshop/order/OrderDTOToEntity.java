@@ -5,7 +5,6 @@ import com.github.krystianmadra.guitarshop.entities.OrderEntity;
 import com.github.krystianmadra.guitarshop.entities.UserEntity;
 import com.github.krystianmadra.guitarshop.guitar.GuitarDTOToEntity;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 

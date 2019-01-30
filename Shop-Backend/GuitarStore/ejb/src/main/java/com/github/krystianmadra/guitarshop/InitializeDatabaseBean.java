@@ -131,12 +131,5 @@ public class InitializeDatabaseBean {
         UserEntity admin = new UserEntity("admin","Q9jC23AdgkxI2zA#@0ix","Grzegorz@Lorem.ipsum");
         admin.setRole(Role.ADMIN);
         em.persist(admin);
-
-        OrderEntity zamowienieBasi = new OrderEntity(baska);
-        em.persist(zamowienieBasi);
-
-        OrderEntity zamowienieAni = new OrderEntity(ania);
-        em.persist(zamowienieAni);
-
     }
 }

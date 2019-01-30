@@ -37,7 +37,7 @@ public class AuthenticationRestful {
     }
 
     private Token issueTokenTo(UserEntity user) {
-        Token token = new Token(user.getRole());
+        Token token = new Token(user.getRole(), user.getUsername());
         userDao.updateToken(user, token);
 
         return token;
