@@ -9,6 +9,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
@@ -20,6 +21,11 @@ public class OrderDao {
 
     @EJB
     private GuitarDao guitarDao;
+
+
+    public List<OrderEntity> getAllOrders(){
+        return em.createQuery("select u from OrderEntity u", OrderEntity.class).getResultList();
+    }
 
 
     @PersistenceContext(unitName = "primary")
