@@ -4,6 +4,10 @@
 
   <img src="../../assets/logo.png" width="67px" height="40px" href="#" class="navbar-brand logo"
        [routerLink]="['landing']"/>
+  <img class="cart-icon-tog" [routerLink]="['cart']" src="../../assets/cart.png" *ngIf=!isLoggedOut()
+       style="width: 49px; height: 43px; margin-right: 10px">
+  <div class="fa fa-heart tog-fav-icon" *ngIf=!isLoggedOut() style="color: #c93b2f; font-size: 30px; margin-right: 15px"
+       [routerLink]="['favourite']"></div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +20,9 @@
 
       <!--TEMPORARY BUTTON!!-->
 
-      <img [routerLink]="['cart']" src="../../assets/cart.png" *ngIf=!isLoggedOut()
+      <img class="cart-icon" [routerLink]="['cart']" src="../../assets/cart.png" *ngIf=!isLoggedOut()
            style="width: 49px; height: 43px; margin-right: 10px">
-      <div class="fa fa-heart" *ngIf=!isLoggedOut() style="color: #c93b2f; font-size: 30px; margin-right: 15px"
+      <div class="fa fa-heart fa-st-heart" *ngIf=!isLoggedOut() style="color: #c93b2f; font-size: 30px; margin-right: 15px"
            [routerLink]="['favourite']"></div>
 
       <!---------------------->
@@ -60,6 +64,18 @@
           </li>
           <li class="nav-item">
             <a class="nav-link cat" href="#" [routerLink]="['contact']">Kontakt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-cat" [routerLink]="['admin']" *ngIf="isAdmin()">Panel Admina</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-cat" style="font-size: 16px" [routerLink]="['landing']" *ngIf=!isLoggedOut() (click)=logout()>Wyloguj się</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cat" *ngIf=isLoggedOut() href="#" [routerLink]="['login']">Zaloguj się</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cat"  *ngIf=isLoggedOut() href="#" [routerLink]="['register']">Zarejestruj się</a>
           </li>
         </div>
       </ul>

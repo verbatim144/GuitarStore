@@ -29,10 +29,10 @@ export class AdminPanelComponent implements OnInit {
               private statsService: StatsService) { }
 
   ngOnInit() {
+    this.getStats()
     this.getGuitars();
     this.sumGuitarsQuantity()
     this.sumOfGuitarCategory();
-    console.log(this.statsService.getGuitar());
 
   }
 
@@ -58,12 +58,10 @@ export class AdminPanelComponent implements OnInit {
           this.guitars = guitars;
           for (let i = 0; i < this.guitars.length; i++) {
             if (this.guitars[i].category == 'Electric') {
-              this.electricGuitarsSum = this.electricGuitarsSum + this.guitars[i].quantity;
-              console.log(this.electricGuitarsSum)
+              this.electricGuitarsSum = this.electricGuitarsSum + this.guitars[i].quantity
             } else {
               if (this.guitars[i].category == 'Classic') {
                 this.classicGuitarSum = this.classicGuitarSum + this.guitars[i].quantity;
-                console.log(this.classicGuitarSum)
               } else {
                 if (this.guitars[i].category == 'Acoustic') {
                   this.acousticGuitarSum = this.acousticGuitarSum + this.guitars[i].quantity;
@@ -113,6 +111,11 @@ export class AdminPanelComponent implements OnInit {
     console.log(this.guitar);
     this.guitarService.addGuitar(this.guitar)
       .subscribe();
+  }
+
+  getStats(){
+     console.log(this.statsService.getGuitar());
+     return this.statsService.getGuitar();
   }
 
   getGuitars() {

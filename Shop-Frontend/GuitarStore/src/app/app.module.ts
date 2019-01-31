@@ -22,6 +22,7 @@ import { ChartsModule } from 'ng2-charts';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { SearchComponent } from './search/search.component';
 import {AuthInterceptor} from './interceptors/auth.service';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {AuthInterceptor} from './interceptors/auth.service';
     HttpClientModule,
     HttpModule,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    ReactiveFormsModule
   ],
   providers: [{
    provide: HTTP_INTERCEPTORS,

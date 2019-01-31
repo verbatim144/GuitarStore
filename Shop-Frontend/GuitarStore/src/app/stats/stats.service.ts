@@ -18,7 +18,7 @@ export class StatsService {
   constructor(private http: HttpClient) { }
 
   getGuitar() {
-    const url = `${this.orderStatsUrl}`;
-    return this.http.get(url);
+    console.log(this.http.get(this.orderStatsUrl));
+    return this.http.get(this.orderStatsUrl);
   }
 }

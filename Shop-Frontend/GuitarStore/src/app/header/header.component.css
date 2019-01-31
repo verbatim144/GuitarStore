@@ -307,8 +307,34 @@ a{
 
 }
 
+.cart-icon-tog{
+  display: none;
+}
+
+.tog-fav-icon{
+  display: none;
+}
 
 @media only screen and (max-width: 991px) {
+
+
+  .cart-icon-tog{
+    display: block;
+    margin-right: auto;
+  }
+
+  .tog-fav-icon{
+    display: block;
+    margin-right: auto;
+  }
+
+  .cart-icon{
+    display: none;
+  }
+
+  .fa-st-heart{
+    display: none;
+  }
 
   .btn-warning{
     display: none;
@@ -316,7 +342,8 @@ a{
 
   #navbarSupportedContent{
     background: rgb(6, 2, 2);
-    height: 272px;
+    height: 320px;
+    width: 100%;
   }
 
   .hr{
