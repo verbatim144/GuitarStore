@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Ibanez 740",
+    "id": 1,
+    "price": 1199.99
+  },
+  {
+    "name": "Yamaha C30M",
+    "id": 2,
+    "price": 530.0
+  },
+  {
+    "name": "Yamaha F310P",
+    "id": 3,
+    "price": 730.99
+  }
+]

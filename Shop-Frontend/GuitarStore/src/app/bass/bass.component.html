@@ -1,0 +1,62 @@
+<div class="bgc">
+  <div class="margin">
+    <div class="container-fluid">
+      <div class="header">Basowe</div>
+      <div class="row">
+        <div *ngFor="let guit of guitars"  class="container-cards">
+        <div *ngIf="guit.category==='Bass'" class="item">
+          <img class="guitar" src="{{guit.imgUrl}}" alt="Guitar 1">
+          <h1 #nameInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.name}}</h1>
+          <h2 #descInput style="font-family: 'Amiri', serif;color: #464646; font-size: 16px">{{guit.description}}</h2>
+          <p #priceInput style="font-family: 'Exo', sans-serif;color: #464646;">{{guit.price}},-zł</p>
+
+          <div><button type="button" class="btn btn-success sucesss"  data-toggle="modal" data-target="#ModalCart" (click)=" orderClick(guit.id)">Dodaj do koszyka</button>
+            <div *ngIf=isLoggedIn() class="modal fade" id="ModalCart" tabindex="-1" role="dialog" aria-labelledby="ModalCart" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Uwaga!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Musisz być zalogowany, aby dodać produkt do koszyka
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-danger liked"  data-toggle="modal" data-target="#ModalFavourite" (click)=" favoriteClick(guit.id)"><i class="fas fa-heart"></i></button>
+            <div *ngIf=isLoggedIn() class="modal fade" id="ModalFavourite" tabindex="-1" role="dialog" aria-labelledby="ModalFavouriteLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="ModalFavouriteLabel">Uwaga!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Musisz być zalogowany, aby dodać produkt do ulubionych
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="cont" style="height: 100px">
+
+    </div>
+</div>
+
